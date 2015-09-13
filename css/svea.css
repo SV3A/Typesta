@@ -1,6 +1,8 @@
+html, body{
+	height: 100%;
+}
 body{
 	overflow: hidden;
-    height: 100%;
 	background-color:#4C4C4C;
 	color:white;
 }
@@ -55,7 +57,9 @@ a {
 .game-main-window{
 	margin-top: 25px;
 }
-
+.allow-percent{
+	height:100%;
+}
 .typing-window{
 	position: relative;
 	padding: 20px;
@@ -66,11 +70,25 @@ a {
 	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.49);
 	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.49);
 	overflow-y: scroll;
+	height: 50%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
+}
+@media (min-width: 1200px) {
+	.typing-window{
+		overflow-y: inherit;
+	}
+
 }
 .typing-window::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
+	border-radius: 6px;
 	background-color: #B4B4B4;
 }
 
@@ -84,7 +102,7 @@ a {
 {
 	border-radius: 6px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #1F1F1F;
+	background-color: #E4E4E4;
 }
 .typing-window p{
 	font-size: 20px;
@@ -261,6 +279,7 @@ input[type="button"].button-primary:focus {
 	color:white;
 	font-size: 18px;
 }
+
 .volume-box a:hover, .off{
 	color:#424242;
 }
