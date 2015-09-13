@@ -1,0 +1,4 @@
+En sneplov af en frontspoiler, sorte stafferinger, ternede sportssæder og ikke mindst GTI-logoet med en 1,6-liters motor på 110 hk snurrende inde bagved.
+Det var nok, så vidste alle raske drenge i 70’erne og 80’erne, at det her var en Golf ud over det sædvanlige.
+Den særlige karisma holdt stadig, da vi for et par år siden tilbragte en uge sammen med en Marsrød Golf I GTI af 1982, som var en af de sidste modeller, inden den mere polerede Golf II holdt sit indtog.
+Udsigten bag rattet opleves nemlig som en ren tidsrejse til dengang, gulerodsbukser var in, statsministeren hed Poul Schlüter, og bandet TV2 brød igennem.

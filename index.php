@@ -18,39 +18,42 @@
 		<link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		
-<div class="gooplus">  <g:plusone></g:plusone> </div>
-		    <div class="container">
-				<h1 style="text-align:center;padding-top:25px;letter-spacing:-2px;"><strong>Tast <span class="green">!</span></strong></h1>
-			</div>
+		<div class="gooplus">
+			<g:plusone></g:plusone>
+			<!--
+			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+			<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
+			-->
+		</div>
+		<div class="container">
+			<h1 style="text-align:center;padding-top:25px;letter-spacing:-2px;"><strong>Skriv <span class="green">!</span></strong></h1>
+		</div>
 		<div class="game-main-window">
-		    <div class="container">
+		    <div class="container gw">
 		    	<div class="row">
 		        	<div class="two-half column">
-
 						<div class="hud">
 							<div class="meter">
- 							<span style="width: 30%"></span>
-						</div>
-							<div class="hud-item"><p>OPM: <span class="wpm">48</span></p></div>
-							<div class="hud-item"><p>% : <span class="accu">96</span></p></div>
+	 							<span class="progressbar"></span>
+							</div>
+							<div class="hud-item"><p>OPM: <span class="wpm">0</span></p></div>
+							<div class="hud-item"><p>% : <span class="accu">100</span></p></div>
 						</div>
 		        		<div class="typing-window">
-				        	<p>
-						        <span class="current-letter">S</span>vend er et drengenavn, der via olddansk "Swæn" stammer fra oldnordisk "Sveinn", hvis betydning er "fri mand i en andens tjeneste". 
-						        Navnet forekommer på dansk også i varianterne Sven, Svenning, Svenn, Svenne, Svein og Sveinn, og ifølge Danmarks Statistik bærer over 
-						        27.500 danskere et af disse navne. Deraf hedder 24.000 Svend. På dansk kan ordet også bruges som betegnelse for en mand, samt som 
-						        stillingsbetegnelse. Sammen med Karl og Bonde hører Svend til blandt de mest almindelige gammeldanske personnavne, og har givet ophav til 
-						        stednavnet Svenstrup, som der findes henved 30 af, fordelt over hele landet. Svend optræder som kongenavn, da en ny æt kommer på tronen i 
-						        Danmark på 900-tallet. Ifølge Adam af Bremen hed også Gorm den gamles bedstefar Suein, og var indvandret fra Normandiet. Brugen af det 
-						        typiske bondenavn i kongehuset tyder på, at knytlingerne ikke hørte til de gamle kongeslægter, men har slået sig op under vikingetogterne.
-				        	</p>
+				        	<p class="text-to-be-typed"><?php
+				        		$files = array('texts/file1.php', 'texts/file2.php', 'texts/file3.php', 'texts/file4.php'); 
+								include $files[rand(0, count($files)-1)];?></p>
 				        	<div class="clock">
+					        	<div class="volume-box">
+						        	<a id="sound-button" href="javascript:void(0)">
+						        		<i class="fa fa-volume-up off"></i>
+						        	</a>
+					        	</div>
 				        		<p>00:00</p>
 				        	</div>
 			        	</div>
-		        		<a class="button button-primary controls start-game" href="javascript:void(0)">BEGYND <i class="fa fa-play-circle"></i></a>
-		        		<a class="button controls stop-game" href="javascript:void(0)">GENSTART <i class="fa fa-repeat"></i></a>
+		        		<a id="start-game" class="button button-primary controls" href="javascript:void(0)">BEGYND <i class="fa fa-play-circle"></i></a>
+		        		<a id="stop-game" class="button controls" href="javascript:void(0)">GENSTART <i class="fa fa-repeat"></i></a>
 		        		<p><small><strong>Tip:</strong> Tryk enter for at starte ⏎</small></p>
 		        	</div>
 		    	</div>
@@ -58,8 +61,23 @@
 		</div>
 		<div class="footer"></div>
 		<div class="footer-text"><p><a class="svea-link" href="http://svea-designs.dk">A piece by Svea Designs</a></p></div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="js/svea.js"></script>
-	<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+		<div id="fb-root"></div>
+		<!--
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.4&appId=429398557234702";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+-->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/svea.js"></script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<!--
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		-->
 	</body>
 </html>
