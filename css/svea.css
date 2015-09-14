@@ -1,18 +1,37 @@
 html, body{
 	height: 100%;
 }
+
+.text-center{
+	text-align: center;
+}
+.y-axis{
+	margin-bottom: 5px;
+}
+.x-axis{
+	margin-top: -15px;
+}
+
+
 body{
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background-color:#4C4C4C;
 	color:white;
+}
+
+.allow-percent{
+	height:100%;
 }
 
 p {
 	font-size: 20px;
 }
 
-h1{
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+.heading{
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+	text-align:center;
+	padding-top:25px;
+	letter-spacing:-2px;
 }
 
 a {
@@ -23,43 +42,12 @@ a {
 	color:#33F099;
 }
 
-.footer{
-	position: absolute;
-	bottom: 0;
-	width:100%;
-	background: #33F099;
-    padding: 60px 0;
-    -ms-transform: skew(0deg, -2deg);
-    -webkit-transform: skew(0deg, -2deg);
-    transform: skew(0deg, -2deg);
-    margin-bottom: -50px;
-	-webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
-	-webkit-backface-visibility: hidden;
-}
-
-.footer-text{
-	position: absolute;
-	bottom:0px;
-	right:15px;
-}
-
-.svea-link{
-	color:#4C4C4C;
-	text-decoration: none;
-}
-
-.svea-link:hover{
-	color:white;
-}
-
+/* Main game window
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .game-main-window{
 	margin-top: 25px;
 }
-.allow-percent{
-	height:100%;
-}
+
 .typing-window{
 	position: relative;
 	padding: 20px;
@@ -70,15 +58,22 @@ a {
 	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.49);
 	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.49);
 	overflow-y: scroll;
-	height: 50%;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor:default;
+	max-height: 50%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
 }
+
+
+.text-to-be-typed span{
+	padding:0 1px;
+	border-radius: 1px;
+}
+
 @media (min-width: 1200px) {
 	.typing-window{
 		overflow-y: inherit;
@@ -136,14 +131,14 @@ a {
 }
 
 .current-letter{
-	padding:0 2px;
+
 	background-color: #434343;
-	border-radius: 1px;
+
 	/*
-    animation-name: cursor-blick;
-    animation-duration: 1.6s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+	animation-name: cursor-blick;
+	animation-duration: 1.6s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 	animation-delay: 2s;
 	*/
 }
@@ -157,9 +152,9 @@ a {
 
 
 @keyframes cursor-blick {
-    0%   {background-color: #434343;}
-    50%  {background: transparent;}
-    100% {background-color: #434343;}
+	0%   {background-color: #434343;}
+	50%  {background: transparent;}
+	100% {background-color: #434343;}
 }
 
 .clock{
@@ -178,14 +173,108 @@ a {
 	margin-right: 5px;
 }
 
+.volume-box{
+	position: absolute;
+	bottom:28px;
+	right: 60px;
+	color:white;
+}
+
+.volume-box a{
+	color:white;
+	font-size: 18px;
+}
+
+.volume-box a:hover, .off{
+	color:#424242;
+}
+
+.hidden-reset{
+	opacity: 0;
+	transform:translateX(600px);
+}
+
+.show-reset{
+	opacity: 1;
+	transform:translateX(0);
+}
+
+/* Results window
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.results-window{
+	opacity: 0;
+}
+.ct-series-a .ct-line{
+	stroke: #33F099;
+}
+.ct-series-a .ct-point {
+	stroke: #2CC07C;
+	stroke-width: 10px;
+}
+.ct-grid {
+    stroke: #CFCFCF;
+}
+.ct-label {
+    fill: #CFCFCF;
+    color: #CFCFCF;
+    font-size: 14px;
+}
+.show-results{
+	opacity: 1;
+	transition: 1s ease-in;
+}
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.footer{
+
+	width:100%;
+	background: #33F099;
+	padding: 60px 0;
+	-ms-transform: skew(0deg, -2deg);
+	-webkit-transform: skew(0deg, -2deg);
+	transform: skew(0deg, -2deg);
+	margin-bottom: -50px;
+	-webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+	-webkit-backface-visibility: hidden;
+}
+
+.footer-text{
+	background: #33F099;
+	padding: 25px;
+	-webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.75);
+
+}
+.footer-text p{
+	margin: 0;
+	text-align: center;
+
+}
+
+.svea-link{
+	color:#4C4C4C;
+	text-decoration: none;
+}
+
+.svea-link:hover{
+	color:white;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  background-color: white;
-  transition: 0.2s ease;
-  font-size: 14px;
+	background-color: white;
+	transition: 0.2s ease;
+	font-size: 14px;
 }
 
 .button:hover,
@@ -225,6 +314,8 @@ input[type="button"].button-primary:focus {
 	border-color: #34D189; 
 }
 
+/* Progressbar
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .meter { 
 	height: 7px;  /* Can be anything */
 	position: relative;
@@ -238,25 +329,27 @@ input[type="button"].button-primary:focus {
 }
 
 .meter > span {
-  display: block;
-  height: 100%;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background-color: #33F099;
-  background-image: linear-gradient(
-    center bottom,
-    rgb(43,194,83) 37%,
-    rgb(84,240,84) 69%
-  );
-  box-shadow: 
-    inset 0 2px 9px  rgba(255,255,255,0.3),
-    inset 0 -2px 6px rgba(0,0,0,0.4);
-  position: relative;
-  overflow: hidden;
+	display: block;
+	height: 100%;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color: #33F099;
+	background-image: linear-gradient(
+		center bottom,
+		rgb(43,194,83) 37%,
+		rgb(84,240,84) 69%
+	);
+	box-shadow: 
+		inset 0 2px 9px  rgba(255,255,255,0.3),
+		inset 0 -2px 6px rgba(0,0,0,0.4);
+	position: relative;
+	overflow: hidden;
 }
 
+/* Social links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .gooplus{
 	position: absolute;
 	top:2px;
@@ -267,20 +360,3 @@ input[type="button"].button-primary:focus {
 	display: block;
 	margin-bottom: 4px;
 }
-
-.volume-box{
-	position: absolute;
-	bottom:28px;
-	right: 60px;
-	color:white;
-}
-
-.volume-box a{
-	color:white;
-	font-size: 18px;
-}
-
-.volume-box a:hover, .off{
-	color:#424242;
-}
-

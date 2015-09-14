@@ -1,4 +1,2 @@
 Hvert sekund rammes jorden af millionvis af partikler fra det ydre rum. Disse meget energirige partikler bevæger sig med næsten lysets hastighed, og har på deres vej passeret fjerne egne af universet.
-I marts 2013 blev det endelig vist, at de fleste kosmiske partikler skabes i galaktiske supernovaer, hvor en stjernes endeligt resulterer i en kæmpe eksplosion. I denne proces udsendes energirige partikler i alle retninger, og det omkringliggende kosmos fyldes med elektroner, protoner og tunge ioner som for eksempel jern – de kosmiske partikler.
-Men det er ikke hele historien. Endnu længere væk fra jorden, i centrum af ekstremt aktive galakser og steder hvor sorte huller kolliderer med hinanden, skabes kosmiske partikler med ultrahøj energi. Deres energi er så stor, at de har en milliard gange mere energi end de partikler, som kolliderer i eksperimenterne i verdens største accelerator,
-Large Hadron Collider ved CERN.
+I marts 2013 blev det endelig vist, at de fleste kosmiske partikler skabes i galaktiske supernovaer, hvor en stjernes endeligt resulterer i en kæmpe eksplosion.

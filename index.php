@@ -13,9 +13,15 @@
 		<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+		<link rel="stylesheet" type="text/css" href="js/chartist/chartist.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/svea.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
+		
+
+
+
+		
 	</head>
 	<body>
 		<div class="gooplus">
@@ -26,7 +32,7 @@
 			-->
 		</div>
 		<div class="container">
-			<h1 style="text-align:center;padding-top:25px;letter-spacing:-2px;"><strong>Skriv <span class="green">!</span></strong></h1>
+			<h1 class="heading"><strong>Skriv <span class="green">!</span></strong></h1>
 		</div>
 		<div class="game-main-window allow-percent">
 			<div class="container allow-percent">
@@ -41,7 +47,8 @@
 						</div>
 						<div class="typing-window">
 							<p class="text-to-be-typed"><?php
-								$files = array('texts/file1.php', 'texts/file2.php', 'texts/file3.php', 'texts/file4.php');
+							//Neutrinoer fra fjerne galakser har tilbagelagt millioner af lysår for til sidst at fare gennem Jorden og give sig til kende dybt nede i isen på Sydpolen.
+								$files = array('texts/file1.php', 'texts/file2.php', 'texts/file3.php', 'texts/file4.php', 'texts/file5.php');
 								include $files[rand(0, count($files)-1)];?></p>
 							<div class="clock">
 								<div class="volume-box">
@@ -52,18 +59,32 @@
 								<p>00:00</p>
 							</div>
 						</div>
-						<a id="start-game" class="button button-primary controls" href="javascript:void(0)">BEGYND <i class="fa fa-play-circle"></i></a>
-						<a id="stop-game" class="button controls" href="javascript:void(0)">GENSTART <i class="fa fa-repeat"></i></a>
+						<a id="start-button" class="button button-primary controls" href="javascript:void(0)">BEGYND <i class="fa fa-play-circle"></i></a>
+						<a id="restart-button" class="button controls hidden-reset" href="javascript:void(0)">GENSTART <i class="fa fa-repeat"></i></a>
 						<p><small><strong>Tip:</strong> Tryk enter for at starte ⏎</small></p>
+						<div class="results-window hidden-results">
+							<h2>Resultat:</h2>
+							<div id="results-chart" class="grap-window ct-chart">
+							<p class="y-axis"><small>OPM.</small></p>
+							</div>
+							<p class="text-center x-axis"><small>SEKUNDER</small></p>
+						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
+
+
+	<!--
+
+		<div class="footer-text"><p><a class="svea-link" href="http://svea-designs.dk">A piece by Svea Designs</a></p></div>
+	
 		<div class="footer"></div>
 		<div class="footer-text"><p><a class="svea-link" href="http://svea-designs.dk">A piece by Svea Designs</a></p></div>
 
 		<div id="fb-root"></div>
-		<!--
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -74,6 +95,7 @@
 
 -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/chartist/chartist.min.js"></script>
 		<script type="text/javascript" src="js/sveastructured.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<!--
