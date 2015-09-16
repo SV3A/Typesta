@@ -1,5 +1,5 @@
 html, body{
-	height: 100%;
+	min-height: 100%;
 }
 
 .text-center{
@@ -11,12 +11,26 @@ html, body{
 .x-axis{
 	margin-top: -15px;
 }
-
-
 body{
 	/*overflow: hidden;*/
 	background-color:#4C4C4C;
 	color:white;
+	overflow-y: scroll;
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #242424;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4C4C4C;
+  border-radius: 10px;
 }
 
 .allow-percent{
@@ -45,6 +59,122 @@ a {
 .green{
 	color:#33F099;
 }
+/* MENU
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.ham, .close-menu{
+	position: fixed;
+	-webkit-font-smoothing: antialiased;
+	cursor: pointer;
+	top: 0.2em;
+	left: 0.5em;
+	font-size: 28px;
+	transform: translate3d(0,0,0) ;
+	transition: transform .4s ease-in, color .1s;
+	z-index: 35;
+text-shadow:1px 1px 2px rgba(150, 150, 150, 0.5);
+}
+
+.hide-ham{
+	transform: translate3d(0,-100px,0);
+}
+
+.close-menu-hidden{
+	transform: translate3d(-100px,0,0);
+	opacity:0;
+}
+
+.ham, .close-menu{
+	color:#33F099;
+}
+
+.ham:hover{
+	color:white;
+}
+
+.close-menu:hover{
+	color:#424242;
+}
+
+.dim{
+	display: none;
+	position: fixed;
+	left:0,
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.65);
+	z-index: 10;
+
+}
+.blurred-out{
+	-webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(80%);
+    -o-filter: grayscale(80%);
+    -ms-filter: grayscale(80%);
+    filter: grayscale(80%);
+    filter: gray;
+}
+
+.menu {
+  list-style: none;
+  line-height: 42px;
+  margin: auto;
+  /*outline: 1px solid red;*/
+  padding-left: 0;
+  width: 15em;
+}
+
+.menu a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5F5F5F;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  padding-left: 1.5em;
+  width: 100%;
+  
+}
+
+.menu a:hover {
+  margin-left: 1em;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.menu li {
+  box-shadow: 3px 0 rgba(51,240,153,.2) inset;
+  margin-bottom: 5px;
+  padding-left: .5em;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;/*outline: 1px solid green*/
+}
+
+.menu li:hover { box-shadow: 16em 0 #33F099 inset; }
+
+nav {
+  background: white;
+  position: fixed;
+  left: -18em;
+  top: 0;
+  padding-top: 5em;
+  box-sizing: border-box;
+  z-index: 20;
+  min-height: 100%;
+  -webkit-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+-webkit-box-shadow: 2px 0px 11px -1px rgba(0,0,0,0.5);
+-moz-box-shadow: 2px 0px 11px -1px rgba(0,0,0,0.5);
+box-shadow: 2px 0px 11px -1px rgba(0,0,0,0.5);
+
+}
+
+nav.active { left: 0; }
+
 
 /* Main game window
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

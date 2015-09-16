@@ -1,47 +1,38 @@
 (function($) {
 	$(document).ready(function() {
 
-		var TypingTutor = (function () {
-			// privates
-			var
-				// Variables
-				typed,
+		var TypingTutor = (function() {
+			var typed,
 				errors,
 				calcProg,
 				tenth,
-				soundOn,
+				soundOn = false,
 				wpmTimer,
 				progressTimer,
 				elapsedSeconds,
 				timer,
 				lettersTotal,
-				wpmPoints = [
-				],
-				timePoints = [
-				],
+				wpmPoints = [],
+				timePoints = [],
 				failAudio = new Audio('pew.mp3'),
-				// jQuery objects
 				cur = $(),
-				wpmCount = $( '.hud .hud-item .wpm' ),
+				wpmCount = $('.hud .hud-item .wpm'),
 				accuCount = $('.hud .hud-item .accu'),
-				progressBar = $( '.meter span' ),
-				starsContainer = $( ".results-window .stars p" ),
-				clockElement = $( '.typing-window .clock p' );
+				progressBar = $('.meter span'),
+				starsContainer = $(".results-window .stars p"),
+				clockElement = $('.typing-window .clock p');
 
 			function resetValues() {
-				typed = 0,
-				errors = 0,
-				calcProg = 0,
-				tenth = 0,
-				soundOn = false,
-				elapsedSeconds = 0,
-				wpmPoints = [
-				],
-				timePoints = [
-				];
+				typed = 0;
+				errors = 0;
+				calcProg = 0;
+				tenth = 0;
+				elapsedSeconds = 0;
+				wpmPoints = [];
+				timePoints = [];
 			}
 
-			function loadText () {
+			function loadText() {
 				// Adds a span around each character after removing multiple instances of spaces,
 				// and counts total number of words.
 				$elem = $('.text-to-be-typed');
@@ -50,88 +41,91 @@
 				});
 				$elem.html(chars.join(''));
 				lettersTotal = parseInt($('.text-to-be-typed span').length);
-				return
+				return;
 			}
 
-			function initialMarkup () {
+			function initialMarkup() {
 				// Marks the text modified by loadText with nesecary CSS.
 				var mark = $('.typing-window p');
 				cur = mark.children(':first-child').addClass('first');
 				mark.children(':last-child').addClass('last');
-				return
+				return;
 			}
 
-			function startGame(){
+			function startGame() {
 				// Starts the game by resetting vars, animates the game's control-buttons,
 				// adds current letter and starts timing functions.
 				$('html, body').animate({
-        	scrollTop: $('#top').offset().top
-    		}, 100);
+					scrollTop: $('#top').offset().top
+				}, 100);
 				resetValues();
 				cur.addClass('current-letter');
-				startTimer();
+				$(document).one("keypress", function() {
+					startTimer();
+					setTimeout(updateWpm, 1005);
+					updateProgress();
+				});
 				keyBoard();
-				setTimeout(updateWpm, 1010);
-				updateProgress();
-				return
+				return;
 			}
 
 			function resetGame() {
-			// Stops main timer, resets document CSS and runs startGame.
-				clearInterval( timer );
-				clearTimeout( wpmTimer );
+				// Stops main timer, resets document CSS and runs startGame.
+				clearInterval(timer);
+				clearTimeout(wpmTimer);
 				starsContainer.empty();
-				clockElement.text( "00:00" );
+				clockElement.text("00:00");
 				accuCount.text("100.0");
+				wpmCount.text("0");
 				$(document).off();
-				$( '.results-window' )
+				$('.results-window')
 					.removeClass('show-results');
 				$('.text-to-be-typed span')
 					.removeClass('fail ok');
-				cur.removeClass( 'current-letter' );
+				cur.removeClass('current-letter');
 				cur = $('.first');
 				startGame();
-				return
+				return;
 			}
 
 			function levelComplete() {
-			// Fires when user types last letter, stops listening for keyboard input,
-			// stop updating stats and displays graph with displayResults.
+				// Fires when user types last letter, stops listening for keyboard input,
+				// stop updating stats and displays graph with displayResults.
 				$(document).off();
-				clearInterval( timer );
-				clearTimeout( wpmTimer );
+				clearInterval(timer);
+				clearTimeout(wpmTimer);
 				displayResults();
 				updateAccu();
-				return
+				return;
 			}
 
 			function startTimer() {
-			// Keeps and formats time.
+				// Keeps and formats time.
 				var min,
 					sec = 0;
-				timer = setInterval(function () {
+				timer = setInterval(function() {
 					++sec;
 					++elapsedSeconds;
-					min = Math.floor( elapsedSeconds / (60) );
+					min = Math.floor(elapsedSeconds / (60));
 					min = min < 10 ? "0" + min : min;
-					sec = sec < 10 ? "0" + sec : sec;
 					sec = sec == 60 ? 0 : sec;
-					clockElement.text( min + ":" + sec );
+					sec = sec < 10 ? "0" + sec : sec;
+					clockElement.text(min + ":" + sec);
 				}, 1000);
-				return ;
+				return;
 			}
 
 			function keyBoard() {
-			// Handles all the keyboard input from the user 
+				// Handles all the keyboard input from the user 
 				// Typing function
 				$(document).keypress(function(type) {
 					type.preventDefault();
-					if ( type.which == cur.text().charCodeAt(0) ) {
+					if (type.which == cur.text().charCodeAt(0)) {
 						cur.addClass('ok');
-					} else{
+					} else {
 						cur.addClass('fail');
 						// Play fail sound
-						if ( soundOn == true ) {
+						if (soundOn === true) {
 							failAudio.play();
 						}
 						++errors;
@@ -139,54 +133,57 @@
 					cur.removeClass('current-letter');
 					++typed;
 					// Is the game finished?
-					if ( typed != lettersTotal ) {	
+					if (typed != lettersTotal) {
 						cur = cur.next().addClass('current-letter');
 					} else {
 						levelComplete();
 					}
-					return
+					return;
 				});
 
 				// Delete funtion
 				$(document).keydown(function(goback) {
-					if ( goback.which == 8 ) {
+					if (goback.which == 8) {
 						goback.preventDefault();
 						// Has the game started or is it over?
-						if ( !cur.hasClass('first') && !cur.hasClass('last') ) {
+						if (!cur.hasClass('first') && !cur.hasClass('last')) {
 							cur.removeClass('current-letter fail ok');
 							cur = cur.prev();
 							cur
 								.addClass('current-letter')
 								.removeClass('fail ok');
 							--typed;
-						};
-					} else if( goback.which == 32 ) {
+						}
+					} else if (goback.which == 32) {
 						updateAccu();
 					}
+					return;
 				});
-			};
+			}
 
 			function updateWpm() {
-				var calcWpm = (((typed/5)/elapsedSeconds)*60).toFixed(0);
+				var calcWpm = (((typed / 5) / elapsedSeconds) * 60).toFixed(0);
 				wpmCount.text(calcWpm);
-				if ( calcProg >= tenth ) {
+				if (calcProg >= tenth) {
 					wpmPoints.push(calcWpm);
 					timePoints.push(elapsedSeconds);
 					tenth += 10;
 				}
 				wpmTimer = setTimeout(updateWpm, 800);
-				return
+				return;
 			}
 
 			function updateAccu() {
-				accuCount.text((100 - ((errors/lettersTotal)*100)).toFixed(1));
-				return
+				accuCount.text((100 - ((errors / lettersTotal) * 100)).toFixed(1));
+				return;
 			}
 
 			function updateProgress() {
-				calcProg = ((typed/lettersTotal)*100).toFixed(1);
-				progressBar.css({"width": calcProg+"%"});
-				// ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !             C O N S O L E   L O G
+				calcProg = ((typed / lettersTotal) * 100).toFixed(1);
+				progressBar.css({
+					"width": calcProg + "%"
+				});
+				// ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! ! !  C O N S O L E   L O G
 				/*
 				console.log([
 					"Typed:",typed,
@@ -198,88 +195,90 @@
 					]); 
 				*/
 				progressTimer = setTimeout(updateProgress, 200);
-				return
+				return;
 			}
 
 			function calcWavg(total) {
 				var wpmAvg;
-				for( var i = 0; i < wpmPoints.length; i++ ) {
-					total +=  parseInt(wpmPoints[i], 10 );
+				for (var i = 0; i < wpmPoints.length; i++) {
+					total += parseInt(wpmPoints[i], 10);
 				}
-				wpmAvg = (total / wpmPoints.length).toFixed(0)
+				wpmAvg = (total / wpmPoints.length).toFixed(0);
 				return wpmAvg;
 			}
 
 			function starsScore(wpmAvg) {
-				var fillStars
-					,motivate;
-				switch(true) {
-					case (wpmAvg <= 20 && wpmAvg < 30):
+				var fillStars,
+					motivate;
+				switch (true) {
+					case (wpmAvg < 30):
 						fillStars = 0;
 						motivate = "Du har ikke lige frem travlt, hva? :)";
 						break;
 					case (wpmAvg >= 30 && wpmAvg < 40):
 						fillStars = 1;
 						motivate = "Du har ikke lige frem travlt, hva? :)";
-				  	break; 
+						break;
 					case (wpmAvg >= 40 && wpmAvg < 45):
 						fillStars = 2;
 						motivate = "Rom blev ikke bygget på én dag :)";
-				    break;
+						break;
 					case (wpmAvg >= 45 && wpmAvg < 55):
 						fillStars = 3;
 						motivate = "Ikke så ringe endda, keep it up!";
-				    break;
+						break;
 					case (wpmAvg >= 55 && wpmAvg < 75):
 						fillStars = 4;
 						motivate = "Slet ikke dårligt, men der er plads til forbedring...";
-				    break;
+						break;
 					case (wpmAvg >= 75 && wpmAvg < 85):
 						fillStars = 5;
 						motivate = "I've tought you well!";
-				    break;
+						break;
 					case (wpmAvg >= 85):
 						fillStars = 6;
 						motivate = "WOW.. Du er jo en ninja ved et tastatur!";
-				    break;
+						break;
 				}
-				for( var i = 0; i < fillStars; i++ ) {
+				for (var i = 0; i < fillStars; i++) {
 					starsContainer.append("<i class='fa fa-star'></i>");
 				}
-				for(; fillStars < 6; fillStars++ ) {
+				for (; fillStars < 6; fillStars++) {
 					starsContainer.append("<i class='fa fa-star-o'></i>");
 				}
 				$('.motivation-message p').text(motivate);
-				return
+				return;
 			}
 
 			function displayResults() {
-			// Show the results when the level is complete.
+				// Show the results when the level is complete.
 				var maxWpm,
 					wpmAvg;
 				wpmAvg = calcWavg(0);
 				maxWpm = Math.max.apply(Math, wpmPoints);
-				$( '.wpm-avg p .result' ).text(wpmAvg);
-				$( '.wpm-max p .result' ).text(maxWpm);
-				$( '.accu-two p .result' ).text((100 - ((errors/lettersTotal)*100)).toFixed(2));
+				$('.wpm-avg p .result').text(wpmAvg);
+				$('.wpm-max p .result').text(maxWpm);
+				$('.accu-two p .result').text((100 - ((errors / lettersTotal) * 100)).toFixed(2));
 				starsScore(wpmAvg);
 				$('html, body').animate({
-        	scrollTop: $('.results-window').offset().top
-    		}, 500, function() {$( '.results-window' ).addClass('show-results');});
+					scrollTop: $('.results-window').offset().top
+				}, 500, function() {
+					$('.results-window').addClass('show-results');
+				});
 
 				var chart = Chartist.Line('#results-chart', {
 					labels: timePoints,
-				  series: [
-				  	wpmPoints
-				  ]
+					series: [
+						wpmPoints
+					]
 				}, {
 					height: 300,
-				  fullWidth: true,
-				  chartPadding: {
-				    right: 40
-				  }
+					fullWidth: true,
+					chartPadding: {
+						right: 40
+					}
 				});
-				return
+				return;
 			}
 
 			// Return object exposed to the user
@@ -287,34 +286,38 @@
 				initGame: function() {
 					loadText();
 					initialMarkup();
-					return isStarted = false;
+					isStarted = false;
+					return isStarted;
 				},
 
 				startGame: function() {
 					$('#start-button')
-						.css({"display": "none"});
+						.css({
+							"display": "none"
+						});
 					$('#restart-button')
 						.addClass('show-reset');
 					$('.game-main-window .tip')
 						.hide();
 					startGame();
-					return isStarted = true;
+					isStarted = true;
+					return isStarted;
 				},
 
-				restartGame: function (){
+				restartGame: function() {
 					resetGame();
-					return
+					return;
 				},
 
-				toggleSound: function (){
-					if ( soundOn == false ) {
+				toggleSound: function() {
+					if (soundOn === false) {
 						$('.typing-window .volume-box i').removeClass('off');
-						soundOn = true;		
+						soundOn = true;
 					} else {
 						$('.typing-window .volume-box i').addClass('off');
-						soundOn = false
+						soundOn = false;
 					}
-					return
+					return;
 				}
 			};
 		})();
@@ -324,22 +327,22 @@
 
 		// START GAME
 		// - - - - - - - - - - - - - - - - - - - - - -
-		$('#start-button').click(function(){
-			if ( isStarted == false ) {
+		$('#start-button').click(function() {
+			if (isStarted === false) {
 				TypingTutor.startGame();
 				this.blur();
 			}
 		});
 
 		$(document).keyup(function(e) {
-			if ( e.which == 13 && isStarted == false ) {
+			if (e.which == 13 && isStarted === false) {
 				TypingTutor.startGame();
 			}
 		});
 		// RESTART GAME
 		// - - - - - - - - - - - - - - - - - - - - - -
 		$('#restart-button').click(function() {
-			if ( isStarted == true ) {
+			if (isStarted === true) {
 				TypingTutor.restartGame();
 				this.blur();
 			}
@@ -350,5 +353,16 @@
 			TypingTutor.toggleSound();
 			this.blur();
 		});
+
+
+		$('#nav-buttons').click(function(event) {
+			$('#nav-buttons .ham').toggleClass('hide-ham');
+			$('#nav-buttons .close-menu').toggleClass('close-menu-hidden');
+			$('#main-content').toggleClass('blurred-out');
+			$('.game-main-window').toggleClass('blurred-out');
+			$('nav').toggleClass('active');
+			$('.dim').toggle();
+		});
+
 	});
 })(jQuery);

@@ -24,14 +24,27 @@
 		
 	</head>
 	<body id="top">
+	<div class="dim"></div>
+	    <div id="nav-buttons"><span class="ham"><i class="fa fa-bars"></i></span><span class="close-menu close-menu-hidden"><i class="fa fa-arrow-circle-left"></i></span></div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Forsiden</a></li>
+        <li><a href="#">Lær</a></li>
+        <li><a href="#">Test</a></li>
+        <li><a href="#">Om</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </nav>
+<!--
 		<div class="gooplus">
 			<g:plusone></g:plusone>
-			<!--
+			
 			<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
 			<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
-			-->
+			
 		</div>
-		<div class="container">
+		-->
+		<div id="main-content" class="container">
 			<h1 class="heading"><strong>Skriv <span class="green">!</span></strong></h1>
 		</div>
 		<div class="game-main-window allow-percent">
