@@ -34,6 +34,10 @@ p {
 	letter-spacing:-2px;
 }
 
+h2{
+	font-size: 3.8rem;
+}
+
 a {
 	transition: 0.2s ease;
 }
@@ -204,6 +208,7 @@ a {
 
 .results-window{
 	opacity: 0;
+	margin-top: 15px;
 }
 .ct-series-a .ct-line{
 	stroke: #33F099;
@@ -225,6 +230,34 @@ a {
 	transition: 1s ease-in;
 }
 
+.wpm-max, .wpm-avg, .accu-two, .title-wpm, .title-accu{
+	display: inline-block;
+	margin: 0 10px;
+}
+.result{
+	color:#33F099;
+}
+.accuracy p {
+	margin-bottom: 5px; 
+}
+hr {
+    margin-top: 1.8rem;
+    margin-top: 2.5rem;
+}
+.stars i{
+	color:#E2FF6F;
+	margin: 0 2px;
+	font-size: 30px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.motivation-message p {
+	font-size: 16px;
+	font-style: italic; 
+	margin: 0 0 30px 0;
+}
+.stars p {
+	margin-bottom: 0;
+}
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .footer{
