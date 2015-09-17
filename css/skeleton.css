@@ -10,10 +10,12 @@
 
 /* Table of contents
 ––––––––––––––––––––––––––––––––––––––––––––––––––
+C H A N G E S  B Y  S V E A: * * *
+
 - Grid
 - Base Styles
 - Typography
-- Links
+- Links * * *
 - Buttons
 - Forms
 - Lists
@@ -24,7 +26,6 @@
 - Clearing
 - Media Queries
 */
-
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -154,13 +155,6 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 p {
   margin-top: 0; }
 
-
-/* Links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-a {
-  color: #1EAEDB; }
-a:hover {
-  color: #0FA0CE; }
 
 
 /* Buttons

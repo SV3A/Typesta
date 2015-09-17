@@ -333,6 +333,12 @@
 				this.blur();
 			}
 		});
+		$('.tw-frontpage').click(function() {
+			if (isStarted === false) {
+				TypingTutor.startGame();
+				this.blur();
+			}
+		});
 
 		$(document).keyup(function(e) {
 			if (e.which == 13 && isStarted === false) {
@@ -354,15 +360,18 @@
 			this.blur();
 		});
 
-
+		$('.social-links').delay(2000).fadeIn();
 		$('#nav-buttons').click(function(event) {
 			$('#nav-buttons .ham').toggleClass('hide-ham');
 			$('#nav-buttons .close-menu').toggleClass('close-menu-hidden');
-			$('#main-content').toggleClass('blurred-out');
-			$('.game-main-window').toggleClass('blurred-out');
 			$('nav').toggleClass('active');
 			$('.dim').toggle();
 		});
-
+		$('.dim').click(function(event) {
+			$('#nav-buttons .ham').toggleClass('hide-ham');
+			$('#nav-buttons .close-menu').toggleClass('close-menu-hidden');
+			$('nav').toggleClass('active');
+			$('.dim').toggle();
+		});
 	});
 })(jQuery);

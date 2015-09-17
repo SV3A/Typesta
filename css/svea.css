@@ -1,7 +1,9 @@
 html, body{
 	min-height: 100%;
 }
-
+input, textarea {
+    color: #222;
+}
 .text-center{
 	text-align: center;
 }
@@ -11,12 +13,14 @@ html, body{
 .x-axis{
 	margin-top: -15px;
 }
-body{
-	/*overflow: hidden;*/
-	background-color:#4C4C4C;
-	color:white;
-	overflow-y: scroll;
 
+body{
+	background-color:#4C4C4C;
+	overflow-y: auto;
+}
+
+body p{
+	color:white;
 }
 
 ::-webkit-scrollbar {
@@ -53,11 +57,124 @@ h2{
 }
 
 a {
-	transition: 0.2s ease;
-}
+  color: #DB351E;
+  text-decoration: none;
+   }
+a:hover {
+  color: #962212; }
 
 .green{
 	color:#33F099;
+}
+input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+    border: 1px solid #04DF7A;
+}
+.full-width-container {
+	width: 100%;
+	max-width: 100%;
+	clear: both;
+	margin: 0 auto;
+}
+/* FRONTPAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.frontpage{
+	background-color: white;
+}
+.frontpage p{
+	color:#171717;
+}
+
+.ts-logo{
+	display: inline;
+	margin:10px 0 0 10px;
+	position: relative;
+	z-index: 1;
+	vertical-align: top;
+}
+
+.frontpage-greet{
+	text-align:center;
+	position: relative;
+	padding-top: 20px;
+	min-height: 550px;
+	color:white;
+	margin-bottom: 50px;
+}
+
+.frontpage-greet .heading{
+	font-size: 80px;
+	padding-top:25px;
+	letter-spacing:-2px;
+	margin-bottom: 10px;
+	display: inline;
+	text-shadow:none;
+}
+
+.frontpage-greet .sub-heading{
+	font-weight: 300;
+	font-size: 25px;
+	color: white;
+}
+
+.frontpage-hero{
+	background: rgba(0, 0, 0, 0.9);
+	min-height: 550px;
+	position: absolute;
+}
+
+.frontpage-hero::before{
+    background: url('../img/macKeyboard2.jpg');
+    background-size: cover;
+    min-height: 550px;
+	position: absolute;
+	content: " ";
+	width: 100%;
+	opacity: 0.2;
+	-webkit-filter: blur(4px);
+	filter: blur(4px);
+}
+.eye-catcher{
+	background: rgba(116, 116, 116, 0.8);
+	padding: 20px;
+	border-radius: 20px;
+	margin-top:100px;
+}
+.eye-catcher p, .eye-catcher h4{
+	margin-bottom: 0;
+}
+
+.eye-catcher .text-to-be-typed{
+	font-size: 20px;
+	color:#939393;
+	
+}
+.eye-catcher .tw-frontpage{
+	margin: 20px 0;
+	padding: 4px;
+	background-color: white;
+	border-radius: 5px;
+	border: 1 px solid #C5C5C5;
+}
+
+/* Social links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.twitter-share-button{
+	display: inline;
+	margin-right: 4px;
+}
+.fb-padding{
+	position: absolute;
+	left:-52px;
+	bottom: 7px;
+}
+
+.social-links{
+	position: absolute;
+	right:0;
+	bottom: 25px;
+	display: none;
 }
 /* MENU
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -72,7 +189,6 @@ a {
 	transform: translate3d(0,0,0) ;
 	transition: transform .4s ease-in, color .1s;
 	z-index: 35;
-text-shadow:1px 1px 2px rgba(150, 150, 150, 0.5);
 }
 
 .hide-ham{
@@ -240,7 +356,7 @@ nav.active { left: 0; }
 
 .hud{
 	background-color: white;
-	color:#4C4C4C;
+	
 	margin-bottom: 10px;
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.49);
@@ -250,6 +366,7 @@ nav.active { left: 0; }
 .hud p{
 	margin: 0;
 	font-size: 18px;
+	color:#4C4C4C;
 }
 
 .hud-item{
@@ -418,13 +535,58 @@ hr {
 	text-align: center;
 
 }
-
+.copyrights{
+	color:#000000;
+	font-weight: 600;
+}
 .svea-link{
-	color:#4C4C4C;
+color:#000000;
 	text-decoration: none;
 }
 
 .svea-link:hover{
+	color:white;
+}
+
+footer{
+	position:relative;
+	background-color: #33F099;
+	margin-top: 60px;
+	min-height:200px;
+	-webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.35);
+	-moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.35);
+	box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.35);
+}
+footer p{
+	color:#4C4C4C;
+	font-size: 16px;
+	text-align: center;
+	vertical-align: middle;
+}
+.footer-content{
+	position:absolute;
+	width: 100%;
+	margin: 0;
+	bottom:0;
+}
+.thx-to-img{
+	vertical-align: middle;
+	margin: 4px 5px; 
+}
+.more-footer-links {
+	position: absolute;
+	left: 8px;
+	bottom: 8px;
+}
+.more-footer-links p {
+	margin: 0;
+	font-size: 14px;
+}
+.more-footer-links a{
+	color: #4C4C4C;
+	margin: 0 0 0 8px; 
+}
+.more-footer-links a:hover{
 	color:white;
 }
 
@@ -509,17 +671,4 @@ input[type="button"].button-primary:focus {
 		inset 0 -2px 6px rgba(0,0,0,0.4);
 	position: relative;
 	overflow: hidden;
-}
-
-/* Social links
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.gooplus{
-	position: absolute;
-	top:2px;
-	left:2px;
-}
-
-.twitter-share-button{
-	display: block;
-	margin-bottom: 4px;
 }
