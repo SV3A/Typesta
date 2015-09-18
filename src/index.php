@@ -51,7 +51,7 @@
 		
 		<div class="frontpage-greet">
 			<h1 class="heading">Type<span class="green">sta</span>.com</h1>
-			<img class="ts-logo" src="img/logo.svg" alt="Typesta typing website logo" width="30px" />
+			<img class="ts-logo" src="img/logo.svg" alt="Typesta typing website logo" width="30px" height="30px" />
 			<p class="sub-heading">Learn, test and build your touch typing skills.</p>
 
 			<div class="container eye-catcher">
@@ -73,14 +73,16 @@
 				<g:plusone></g:plusone>
 			</div>
 		</div>
-		<div class="container">
-			<div class="row">
-				<div class="eight columns offset-by-two">
-					<h2>So, you want to type fast?</h2>
-					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+		<section id="welcome">
+			<div class="container">
+				<div class="row">
+					<div class="eight columns offset-by-two">
+						<h2>So, you want to type fast?</h2>
+						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. </p>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<footer>
 			<div class="footer-content">
 				<p class="copyrights">

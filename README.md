@@ -1,1 +1,1 @@
-Just a little JS app :-)
+Just a little JS app I made to learn and practice Javascript :-)

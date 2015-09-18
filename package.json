@@ -1,0 +1,19 @@
+{
+  "name": "typesta-typing-tutor",
+  "version": "1.0.0",
+  "description": "A typing tutor",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Rokid@bitbucket.org/Rokid/typing-project.git"
+  },
+  "keywords": [
+    "typing"
+  ],
+  "author": "Svend Erik Andersen // Svea Designs",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Rokid/typing-project#readme"
+}
