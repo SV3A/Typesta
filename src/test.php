@@ -11,10 +11,7 @@
 		<title>Svea Typing tutor!</title>
 
 		<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css' />
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
-		<link rel="stylesheet" type="text/css" href="js/chartist/chartist.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/svea.css" />
+		<link rel="stylesheet" type="text/css" href="css/typesta.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 		<link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css' />
 	</head>

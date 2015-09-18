@@ -14,7 +14,7 @@
 				lettersTotal,
 				wpmPoints = [],
 				timePoints = [],
-				failAudio = new Audio('pew.mp3'),
+				failAudio = new Audio('audio/pew.mp3'),
 				cur = $(),
 				wpmCount = $('.hud .hud-item .wpm'),
 				accuCount = $('.hud .hud-item .accu'),
