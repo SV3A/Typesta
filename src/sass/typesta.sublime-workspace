@@ -1,0 +1,872 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"brow",
+				"browserify-js"
+			],
+			[
+				"au",
+				"autoprefixer"
+			],
+			[
+				"br",
+				"browser-sync"
+			],
+			[
+				"margo",
+				"margin-top"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"pd",
+				"padding-bottom"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"align",
+				"vertical-align"
+			],
+			[
+				"fonst",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"fotn",
+				"font-size"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"main",
+				"game-main-window"
+			],
+			[
+				"resul",
+				"results-window"
+			],
+			[
+				"star",
+				"startsContainer"
+			],
+			[
+				"wpm",
+				"wpmAvg"
+			],
+			[
+				"sta",
+				"starsScore"
+			],
+			[
+				"wp",
+				"wpm"
+			],
+			[
+				"margin-to",
+				"margin-bottom"
+			],
+			[
+				"s",
+				"span	Tag"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"max",
+				"maxWpm"
+			],
+			[
+				"el",
+				"elapsedSeconds"
+			],
+			[
+				"rese",
+				"resetValues"
+			],
+			[
+				"pro",
+				"progressTimer"
+			],
+			[
+				"resu",
+				"results-chart"
+			],
+			[
+				"ease",
+				"ease-in"
+			],
+			[
+				"typ",
+				"typing-window"
+			],
+			[
+				"preve",
+				"preventDefault"
+			],
+			[
+				"to",
+				"toFixed"
+			],
+			[
+				"calc",
+				"calcPro"
+			],
+			[
+				"cal",
+				"calcAccu"
+			],
+			[
+				"up",
+				"updateAccu"
+			],
+			[
+				"ac",
+				"accuCount"
+			],
+			[
+				"pr",
+				"progressBar"
+			],
+			[
+				"ini",
+				"initialMarkup"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"le",
+				"lettersTotal"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"res",
+				"restartGame"
+			],
+			[
+				"key",
+				"keyBoard"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"update",
+				"updateHud"
+			],
+			[
+				"sou",
+				"soundOn"
+			],
+			[
+				"prog",
+				"progress"
+			],
+			[
+				"char",
+				"charCode"
+			],
+			[
+				"cur",
+				"current-letter"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"co",
+				"contact_page_id"
+			],
+			[
+				"ko",
+				"kontaktsidens_id"
+			],
+			[
+				"kontakt",
+				"kontaktsiden"
+			],
+			[
+				"forsidens",
+				"forsidens_id"
+			],
+			[
+				"kont",
+				"kontaktside_id"
+			],
+			[
+				"forside",
+				"forside_id"
+			],
+			[
+				"c",
+				"choise"
+			],
+			[
+				"svea",
+				"svea_jp"
+			],
+			[
+				"d",
+				"div	Tag"
+			],
+			[
+				"hover",
+				"hover"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"ow",
+				"overflow"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"eas",
+				"ease-in-out"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"bac",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/svea/svea-designs/vagrant/html/typesta/src/index.php",
+			"settings":
+			{
+				"buffer_size": 5720,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "typesta.scss",
+			"settings":
+			{
+				"buffer_size": 11358,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "fontawesome/_fontawesome.scss",
+			"settings":
+			{
+				"buffer_size": 405,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 342.0,
+		"last_filter": "col",
+		"selected_items":
+		[
+			[
+				"col",
+				"Color Picker"
+			],
+			[
+				"s",
+				"SassBeautify"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"Color Picker"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 279.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/svea/svea-designs/vagrant/html/typesta",
+		"/home/svea/svea-designs/vagrant/html/typesta/dist/js",
+		"/home/svea/svea-designs/vagrant/html/typesta/src",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/js",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/sass",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/sass/fontawesome"
+	],
+	"file_history":
+	[
+		"/home/svea/svea-designs/vagrant/html/typesta/src/sass/fontawesome/_font-awesome.scss",
+		"/home/svea/svea-designs/vagrant/html/typesta/package.json",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/js/typingtutor.js",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/sass/typesta.scss",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/index.php",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/js/main.js",
+		"/home/svea/svea-designs/vagrant/html/typesta/gulpfile.js",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/sass/_font-awesome.scss",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/texts/file1.php",
+		"/home/svea/svea-designs/vagrant/html/typesta/dist/js/typesta.js",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/js/sveastructured.js",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/test.php",
+		"/home/svea/svea-designs/vagrant/html/typesta/dist/css/typesta.css",
+		"/home/svea/svea-designs/vagrant/html/typesta/src/js/require.js",
+		"/home/svea/svea-designs/vagrant/html/svea-type/test.php",
+		"/home/svea/svea-designs/vagrant/html/svea-type/index.php",
+		"/home/svea/svea-designs/vagrant/html/svea-type/js/main.js",
+		"/home/svea/svea-designs/vagrant/html/svea-type/js/sveastructured.js",
+		"/home/svea/svea-designs/vagrant/html/svea-type/css/svea.css",
+		"/home/svea/svea-designs/vagrant/html/svea-type/css/skeleton.css",
+		"/home/svea/svea-designs/vagrant/html/svea-type/texts/file5.php",
+		"/home/svea/svea-designs/vagrant/html/svea-type/texts/file2.php",
+		"/home/svea/svea-designs/vagrant/html/svea-type/texts/file1.php",
+		"/home/svea/.config/sublime-text-3/Packages/User/JavaScript.sublime-settings",
+		"/home/svea/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/svea/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/svea/svea-designs/vagrant/html/svea-type/js/chartistaxis.js",
+		"/home/svea/Desktop/untitled.js",
+		"/home/svea/svea-designs/vagrant/html/svea-type/js/svea.js",
+		"/home/svea/svea-designs/vagrant/html/svea-type/texts/file3.php",
+		"/home/svea/svea-designs/vagrant/html/svea-type/texts/file4.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/functions.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/template-frontpage.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/header.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/404.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/source/sass/svea_jp.scss",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/footer.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/news_for_front_page.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/archive.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/svea_post_types.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/footer_admin_toolbox.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/template-referencer.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/css/svealogin.css",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/template-gallery.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/template-contact.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/single.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/svea_settings.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/gallery_for_front_page.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/social_icons.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/svea_wiki_page_content.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/front-page.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/template-fontpage.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/template-temp.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/footer-front.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/gulpfile.js",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/sidebar.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/instagram_import.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/svea_wiki_page_content - Kopi.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/footer-simple.php",
+		"/home/svea/Desktop/count.py",
+		"/home/svea/Desktop/Neardy/2015-07-04 15.50.25.jpg",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/css/svea_jp.css",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/inc/svea_core_tweaks.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/source/js_src/svea_src.js",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/page.php",
+		"/home/svea/svea-designs/web-designs/teakkemand-jp/source/sass/output.css",
+		"/home/svea/Desktop/wp_database.sql"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/svea/svea-designs/vagrant/html/typesta/dist/css"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"before",
+			"setting",
+			"audi",
+			"audio",
+			"amd",
+			"audio",
+			"Audio",
+			"audio",
+			"init",
+			"jQuery",
+			"jQuery()",
+			".css",
+			"fade",
+			"grey",
+			"black",
+			"green",
+			"down",
+			"#33F099",
+			"min",
+			"font-sm",
+			"live",
+			"watch",
+			"$.",
+			"plumberErrorHandler",
+			"minify",
+			"uncss-task",
+			"rename",
+			"AUTOPREFIXER_BROWSERS",
+			"notify",
+			"plumber",
+			"imagemin",
+			"uglify",
+			"concat",
+			"jshint",
+			"csso",
+			"sourcemaps",
+			"autoprefixer-core",
+			"postcss",
+			"sass",
+			"svea",
+			"input\n",
+			";\n",
+			"ts",
+			"shado",
+			"off",
+			"sound",
+			"starsContainer",
+			"starsC",
+			"stars",
+			"results-window",
+			"h2",
+			"wpm",
+			"calcPro",
+			"calcAccu",
+			"quarter",
+			"stopTi",
+			"all",
+			"results",
+			"hidden",
+			"quarter",
+			"calcPro",
+			"calcAccu",
+			"start",
+			"stop",
+			"space",
+			"return;",
+			"show",
+			"start",
+			"levelComplete",
+			"tw",
+			"history",
+			"goback",
+			"go back",
+			"preve",
+			"space",
+			"32",
+			"var\n\n",
+			"false\n\n",
+			"preve\n\n",
+			"space\n\n",
+			"32\n\n",
+			"center",
+			"wpmData",
+			"wpmDataPoints",
+			"updateHud",
+			"cur",
+			"failaudio",
+			"toFixed",
+			".accu",
+			"letter",
+			"letterstotal",
+			"if",
+			"draw_white_space\": ",
+			"jyllan",
+			"typed",
+			"updatepro",
+			"letters",
+			"4deg",
+			"letters",
+			"start",
+			".text-to-be-typed",
+			".text-to",
+			"text-to",
+			"text",
+			"pushy",
+			"top",
+			"btn",
+			"greet",
+			"below",
+			"referencer",
+			"footer",
+			"tool",
+			"admin",
+			"admin-menu",
+			"modal",
+			"log-in",
+			"logo-footer",
+			"footer-below",
+			"p {",
+			"logo-foot",
+			"grey",
+			"logo-footer",
+			"foote",
+			"logo",
+			"svea",
+			"hidden",
+			"phone",
+			"sectio"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$minty-green",
+			"$.uncss-task",
+			"$.rename",
+			"autoprefixBrowsers",
+			"$.notify",
+			"$.plumber",
+			"$.imagemin",
+			"$.uglify",
+			"$.concat",
+			"$.jshint",
+			"$.csso",
+			"$.sourcemaps",
+			"$.autoprefixer-core",
+			"$.postcss",
+			"$.sass",
+			"calcProg",
+			"tenth",
+			"elapsedSeconds",
+			"return",
+			"wpmPoints",
+			"timePoints",
+			"updateWpm",
+			"failAudio",
+			"lettersTotal",
+			"#text-to-be-typed",
+			"$contact_page_id",
+			"$acf_kontak_var",
+			"echo $acf_kontak_var",
+			"$acf_kontak_var",
+			"global $acf_kontak_var",
+			"$acf_kontak_var",
+			"'Kontakt'",
+			"'kontakt'",
+			"svea.dev/jp"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/svea/svea-designs/vagrant/html/typesta/src/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5720,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								433,
+								433
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "typesta.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								105,
+								105
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "fontawesome/_fontawesome.scss",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 405,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 291.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "",
+	"project": "typesta.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/svea-designs/web-designs/subl-projects/teakkemand-jp.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 281.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

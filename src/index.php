@@ -10,8 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Typesta | Learn and imporve your touch typing skills.</title>
 		<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/typesta.min.css" /> 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/typesta.css" />
 		<link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
 		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
@@ -37,10 +36,10 @@
 		    <div id="nav-buttons"><span class="ham"><i class="fa fa-bars"></i></span><span class="close-menu close-menu-hidden"><i class="fa fa-arrow-circle-left"></i></span></div>
 	    <nav>
 	      <ul class="menu">
-	        <li><a href="#">Forsiden</a></li>
-	        <li><a href="#">Lær</a></li>
+	        <li><a href="#">Home</a></li>
+	        <li><a href="#">Learn</a></li>
 	        <li><a href="test.php">Test</a></li>
-	        <li><a href="#">Om</a></li>
+	        <li><a href="#">About TS</a></li>
 	        <li><a href="#">FAQ</a></li>
 	      </ul>
 	    </nav>
@@ -102,6 +101,10 @@
 		</footer>
 
 		<div id="fb-root"></div>
+
+		<script src="js/typesta.js"></script>
+
+
 		<script>(function(d, s, id) {
 		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
@@ -109,9 +112,6 @@
 		  js.src = "//connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.4&appId=429398557234702";
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/chartist/chartist.min.js"></script>
-		<script type="text/javascript" src="js/sveastructured.js"></script>
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 	</body>

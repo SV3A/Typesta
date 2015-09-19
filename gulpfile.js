@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
 var autoprefixer = require('autoprefixer');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffers = require('vinyl-buffer');
 
 var src = 'src/';
 var dist = 'dist/';
@@ -27,6 +30,15 @@ gulp.task('browser-sync', ['sass'], function() {
 	//gulp.watch("src/*.php").on('change', browserSync.reload);
 });
 
+gulp.task('browserify-js', function() {
+	return browserify(src + 'js/main.js')
+		.bundle()
+		.pipe(source('typesta.js'))
+		.pipe(buffers())
+		.pipe($.uglify())
+		.pipe(gulp.dest(dist + 'js'));
+});
+
 gulp.task('sass', function() {
 	return gulp.src(src + 'sass/*.scss')
 		.pipe($.plumber(plumberErrorHandler))
@@ -41,9 +53,9 @@ gulp.task('sass', function() {
 });
 
 gulp.task('css-min', function() {
-	return gulp.src(dist + 'css/*.css')
+	return gulp.src(dist + 'css/typesta.css')
 		.pipe($.uncss({
-			html: ['index.php', localSite]
+			html: [localSite, localSite + 'test.php']
 		}))
 		.pipe($.csso())
 		.pipe($.rename({
@@ -63,18 +75,7 @@ gulp.task('copy', function() {
 	gulp.src(src + 'audio/*')
 		.pipe(gulp.dest(dist + 'audio'));
 });
-/*
-gulp.task('js', function() {
-	return gulp.src(src + 'js/*.js')
-		.pipe($.plumber(plumberErrorHandler))
-		.pipe($.jshint())
-		.pipe($.jshint.reporter('fail')),
-		gulp.src(['source/js_src/vendor/bootstrap/*.js', 'source/js_src/vendor/*.js', 'source/js_src/*.js'])
-		.pipe($.concat('svea.min.js'))
-		.pipe($.uglify())
-		.pipe(gulp.dest(dist + 'js'));
-});
-*/
+
 gulp.task('img', function() {
 	gulp.src(src + 'img/**/*.{png,jpg,gif,svg}')
 		.pipe($.plumber(plumberErrorHandler))
@@ -86,12 +87,10 @@ gulp.task('img', function() {
 });
 
 gulp.task('watch', function() {
-
 	gulp.watch(src + 'sass/**/*.scss', ['sass']);
-	gulp.watch(src + 'img/**/*.{jpg,png,gif,svg}', ['img'], browserSync.reload);
-	gulp.watch(src + 'audio/*.mp3', ['copy', browserSync.reload]);
-	gulp.watch(src + '*.php', ['copy', browserSync.reload]);
-
+	gulp.watch(src + 'img/**/*.{jpg,png,gif,svg}', ['img', browserSync.reload]);
+	gulp.watch(src + '**/*.php', ['copy', browserSync.reload]);
+	gulp.watch(src + 'js/**/*.js', ['browserify-js', browserSync.reload]);
 });
 
 var plumberErrorHandler = {
@@ -101,4 +100,4 @@ var plumberErrorHandler = {
 	})
 };
 
-gulp.task('default', ['watch', 'sass', 'copy', 'browser-sync']);
+gulp.task('default', ['watch', 'sass', 'browserify-js', 'copy', 'browser-sync']);

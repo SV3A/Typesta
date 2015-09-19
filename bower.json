@@ -1,0 +1,28 @@
+{
+  "name": "Typesta",
+  "version": "1.0.0",
+  "authors": [
+    "Svend Erik Andersen sveas93@gmail.com"
+  ],
+  "description": "A typing tutor",
+  "main": [
+    "src/js/main.js",
+    "src/sass/typesta.scss",
+  ],
+  "keywords": "touch typing",
+  "license": "MIT",
+  "homepage": "www.typesta.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+	"dist",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#~4.4.0",
+    "chartist": "~0.9.4",
+    "skeleton": "~2.0.4"
+  }
+}
