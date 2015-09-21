@@ -407,15 +407,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/svea/svea-designs/vagrant/html/typesta",
-		"/home/svea/svea-designs/vagrant/html/typesta/dist/js",
-		"/home/svea/svea-designs/vagrant/html/typesta/src",
-		"/home/svea/svea-designs/vagrant/html/typesta/src/js",
-		"/home/svea/svea-designs/vagrant/html/typesta/src/sass",
-		"/home/svea/svea-designs/vagrant/html/typesta/src/sass/fontawesome"
-	],
 	"file_history":
 	[
 		"/home/svea/svea-designs/vagrant/html/typesta/src/sass/fontawesome/_font-awesome.scss",
