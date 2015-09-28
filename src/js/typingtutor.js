@@ -14,7 +14,7 @@ var TypingTutor = (function() {
 		lettersTotal,
 		wpmPoints = [],
 		timePoints = [],
-		//failAudio = new Audio('audio/pew.mp3'),
+		failAudio = new Audio('audio/pew.mp3'),
 		cur = $(),
 		wpmCount = $('.hud .hud-item .wpm'),
 		accuCount = $('.hud .hud-item .accu'),
@@ -281,7 +281,6 @@ var TypingTutor = (function() {
 		return;
 	}
 
-	// Return object exposed to the user
 	return {
 		initGame: function() {
 			loadText();
