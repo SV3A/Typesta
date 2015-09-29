@@ -1,5 +1,6 @@
 var $ = require('jquery');
 var Chartist = require('./chartist/chartist.js');
+var LoadText = require('./loadtxt.js');
 
 var TypingTutor = (function() {
 	var typed,
@@ -12,6 +13,7 @@ var TypingTutor = (function() {
 		elapsedSeconds,
 		timer,
 		lettersTotal,
+		charCodes = [],
 		wpmPoints = [],
 		timePoints = [],
 		failAudio = new Audio('audio/pew.mp3'),
@@ -32,23 +34,13 @@ var TypingTutor = (function() {
 		timePoints = [];
 	}
 
-	function loadText() {
-		// Adds a span around each character after removing multiple instances of spaces,
-		// and counts total number of words.
-		$elem = $('.text-to-be-typed');
-		var chars = $.map($elem.text().replace(/\s\s+/g, ' ').split(''), function(c) {
-			return '<span class="">' + c + '</span>';
-		});
-		$elem.html(chars.join(''));
-		lettersTotal = parseInt($('.text-to-be-typed span').length);
-		return;
-	}
-
 	function initialMarkup() {
+		lettersTotal = parseInt($('.text-to-be-typed span').length);
 		// Marks the text modified by loadText with nesecary CSS.
 		var mark = $('.typing-window p');
 		cur = mark.children(':first-child').addClass('first');
 		mark.children(':last-child').addClass('last');
+		charCodes = LoadText.getCharcodes();
 		return;
 	}
 
@@ -120,7 +112,8 @@ var TypingTutor = (function() {
 		// Typing function
 		$(document).keypress(function(type) {
 			type.preventDefault();
-			if (type.which == cur.text().charCodeAt(0)) {
+			//if (type.which == cur.text().charCodeAt(0)) { OLD 
+			if (type.which === charCodes[typed]) {
 				cur.addClass('ok');
 			} else {
 				cur.addClass('fail');
@@ -281,9 +274,12 @@ var TypingTutor = (function() {
 		return;
 	}
 
+
 	return {
-		initGame: function() {
-			loadText();
+		initGame: function(textType) {
+			if (textType == "regularText") {
+				LoadText.regular('.text-to-be-typed');
+			}
 			initialMarkup();
 			isStarted = false;
 			return isStarted;

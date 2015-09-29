@@ -1,11 +1,11 @@
 var $ = require('jquery');
-var TypingTutor = require('./typingtutor.js');
+var UICtrl = require('./uictrl.js');
+var TypingTutor = require('./game.js');
 
 $(document).ready(function() {
 
-	// FIRE ON LOAD
-	TypingTutor.initGame();
-	console.log("HEJ!lolss")
+
+	TypingTutor.initGame("regularText");
 
 	// START GAME
 	// - - - - - - - - - - - - - - - - - - - - - -
@@ -42,20 +42,8 @@ $(document).ready(function() {
 		this.blur();
 	});
 
-	// UI
-	// - - - - - - - - - - - - - - - - - - - - - -
-	$('.social-links').delay(2000).fadeIn();
-	$('#nav-buttons').click(function(event) {
-		$('#nav-buttons .ham').toggleClass('hide-ham');
-		$('#nav-buttons .close-menu').toggleClass('close-menu-hidden');
-		$('nav').toggleClass('active');
-		$('.dim').toggle();
-	});
-	$('.dim').click(function(event) {
-		$('#nav-buttons .ham').toggleClass('hide-ham');
-		$('#nav-buttons .close-menu').toggleClass('close-menu-hidden');
-		$('nav').toggleClass('active');
-		$('.dim').toggle();
-	});
+
+	UICtrl.showFrontSocial('.social-links');
+	UICtrl.navToggle();
 
 });
