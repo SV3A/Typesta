@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var Chartist = require('./chartist/chartist.js');
 var LoadText = require('./loadtxt.js');
+var LoadKeyboard = require('./loadkeyboard.js');
 
 var TypingTutor = (function() {
 	var typed,
@@ -52,6 +53,8 @@ var TypingTutor = (function() {
 		}, 100);
 		resetValues();
 		cur.addClass('current-letter');
+		keyBoardGuidance.resetGuide();
+		keyBoardGuidance.getNext();
 		$(document).one("keypress", function() {
 			startTimer();
 			setTimeout(updateWpm, 1005);
@@ -88,6 +91,7 @@ var TypingTutor = (function() {
 		clearTimeout(wpmTimer);
 		displayResults();
 		updateAccu();
+		keyBoardGuidance.resetGuide();
 		return;
 	}
 
@@ -107,12 +111,44 @@ var TypingTutor = (function() {
 		return;
 	}
 
+	var keyBoardGuidance = {
+		resetGuide: function() {
+			$(".keyboard div").removeClass("key-guide-nxt");
+		},
+		getNext: function() {
+			if (charCodes[typed] >= 97 || charCodes[typed] < 65) {
+				$(".keyboard div[data-key='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
+			} else {
+				if ($(".keyboard div[data-shift='" + charCodes[typed] + "']").data("finger") > 5) {
+					$(".keyboard div[data-key='leftshiftkey']").toggleClass("key-guide-nxt");
+				} else {
+					$(".keyboard div[data-key='rightshiftkey']").toggleClass("key-guide-nxt");
+				}
+				$(".keyboard div[data-shift='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
+			}
+		},
+		showFail: function(key) {
+			if (key >= 97 || key < 65) {
+				$(".keyboard div[data-key='" + key + "']").addClass("key-guide-fail")
+					.delay(700).queue(function() {
+						$(this).removeClass("key-guide-fail");
+						$(this).dequeue();
+					});
+			} else {
+				$(".keyboard div[data-shift='" + key + "']").addClass("key-guide-fail")
+					.delay(700).queue(function() {
+						$(this).removeClass("key-guide-fail");
+						$(this).dequeue();
+					});
+			}
+		}
+	};
+
 	function keyBoard() {
 		// Handles all the keyboard input from the user 
 		// Typing function
 		$(document).keypress(function(type) {
 			type.preventDefault();
-			//if (type.which == cur.text().charCodeAt(0)) { OLD 
 			if (type.which === charCodes[typed]) {
 				cur.addClass('ok');
 			} else {
@@ -122,9 +158,12 @@ var TypingTutor = (function() {
 					failAudio.play();
 				}
 				++errors;
+				keyBoardGuidance.showFail(type.which);
 			}
 			cur.removeClass('current-letter');
+			keyBoardGuidance.getNext();
 			++typed;
+			keyBoardGuidance.getNext();
 			// Is the game finished?
 			if (typed != lettersTotal) {
 				cur = cur.next().addClass('current-letter');
@@ -145,7 +184,9 @@ var TypingTutor = (function() {
 					cur
 						.addClass('current-letter')
 						.removeClass('fail ok');
+					keyBoardGuidance.getNext();
 					--typed;
+					keyBoardGuidance.getNext();
 				}
 			} else if (goback.which == 32) {
 				updateAccu();
@@ -280,6 +321,7 @@ var TypingTutor = (function() {
 			if (textType == "regularText") {
 				LoadText.regular('.text-to-be-typed');
 			}
+			LoadKeyboard.dk();
 			initialMarkup();
 			isStarted = false;
 			return isStarted;

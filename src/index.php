@@ -45,7 +45,7 @@ include 'header.php';
 				© 2015 | <a class="svea-link"href="http://svea-designs.dk">Svea Designs.</a>
 			</p>
 			<p>
-				Made witht the help of<br/>
+				Made with the help of<br/>
 				<img class="thx-to-img" src="img/thx/chartist-icon.svg" alt="Chartist.js logo" width="25px" height="25px" /> 
 				<strong>&</strong> 
 				<img class="thx-to-img" src="img/thx/skeleton.png" alt="Skeleton css logo" width="25px" height="25px" />

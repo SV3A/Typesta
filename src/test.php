@@ -33,8 +33,10 @@ include 'header.php';
 					</div>
 				</div>
 				<a id="start-button" class="button button-primary controls" href="javascript:void(0)">BEGYND <i class="fa fa-play-circle"></i></a>
-				<a id="restart-button" class="button controls hidden-reset" href="javascript:void(0)">GENSTART <i class="fa fa-repeat"></i></a>
-				<p class="tip"><small><strong>Tip:</strong> Tryk enter for at starte ⏎</small></p>
+				<a id="restart-button" class="button controls hidden-reset" href="javascript:void(0)">GENSTART <i class="fa fa-repeat"></i></a><p class="tip"><small><strong>Tip:</strong> Tryk enter for at starte ⏎</small></p>
+				
+				<div id="keyboard-wrapper">	
+				</div>
 				<div class="results-window hidden-results">
 					<div class="text-center">
 						<h2>Resultater</h2>
@@ -64,6 +66,9 @@ include 'header.php';
 		</div>
 	</div>
 </div>
+
+
+
 <?php
 	include 'footer.php';
 ?>

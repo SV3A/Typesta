@@ -74,6 +74,8 @@ gulp.task('copy', function() {
 		.pipe(gulp.dest(dist + 'texts'));
 	gulp.src(src + 'audio/*')
 		.pipe(gulp.dest(dist + 'audio'));
+	gulp.src(src + 'keyboards/*')
+		.pipe(gulp.dest(dist + 'keyboards'));
 });
 
 gulp.task('img', function() {
@@ -90,6 +92,7 @@ gulp.task('watch', function() {
 	gulp.watch(src + 'sass/**/*.scss', ['sass']);
 	gulp.watch(src + 'img/**/*.{jpg,png,gif,svg}', ['img', browserSync.reload]);
 	gulp.watch(src + '**/*.php', ['copy', browserSync.reload]);
+	gulp.watch(src + '**/*.html', ['copy', browserSync.reload]);
 	gulp.watch(src + 'js/**/*.js', ['browserify-js', browserSync.reload]);
 });
 
