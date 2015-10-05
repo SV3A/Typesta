@@ -5,7 +5,7 @@
 include 'header.php';
 ?>
 <div id="main-content" class="container">
-	<h1 class="heading">Typing <span class="green">test</span></h1>
+	<h1 class="heading">Hastigheds <span class="green">test</span></h1>
 </div>
 <div class="game-main-window allow-percent">
 	<div class="container allow-percent">
@@ -35,7 +35,17 @@ include 'header.php';
 				<a id="start-button" class="button button-primary controls" href="javascript:void(0)">BEGYND <i class="fa fa-play-circle"></i></a>
 				<a id="restart-button" class="button controls hidden-reset" href="javascript:void(0)">GENSTART <i class="fa fa-repeat"></i></a><p class="tip"><small><strong>Tip:</strong> Tryk enter for at starte ⏎</small></p>
 				
-				<div id="keyboard-wrapper">	
+				<div class="keyboard-area">
+					<div id="left-hand" class="hands">
+						<div id="left-finger-idx" class="finger-heighlight"></div>
+					</div>
+					
+					<div id="right-hand" class="hands">
+						<div id="right-finger-idx" class="finger-heighlight"></div>
+					</div>
+	
+					<div id="keyboard-wrapper">	
+					</div>
 				</div>
 				<div class="results-window hidden-results">
 					<div class="text-center">
@@ -66,8 +76,6 @@ include 'header.php';
 		</div>
 	</div>
 </div>
-
-
 
 <?php
 	include 'footer.php';
