@@ -1,7 +1,7 @@
 var $ = require('jquery');
 var Chartist = require('./chartist/chartist.js');
 var LoadText = require('./loadtxt.js');
-var LoadKeyboard = require('./loadkeyboard.js');
+var KeyboardSimulator = require('./keyboardsimulator.js');
 
 var TypingTutor = (function() {
 	var typed,
@@ -361,7 +361,7 @@ var TypingTutor = (function() {
 			if (textType == "regularText") {
 				LoadText.regular('.text-to-be-typed');
 			}
-			LoadKeyboard.dk();
+			KeyboardSimulator.loadKeyboard("dk");
 			initialMarkup();
 			isStarted = false;
 			return isStarted;
@@ -376,6 +376,7 @@ var TypingTutor = (function() {
 				.addClass('show-reset');
 			$('.game-main-window .tip')
 				.hide();
+			$(".hands").slideDown( 200 );
 			startGame();
 			isStarted = true;
 			return isStarted;

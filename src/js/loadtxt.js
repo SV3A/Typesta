@@ -11,6 +11,7 @@ var LoadText = (function() {
 		});
 		//console.log(charCodes);
 		$elem.html(chars.join(''));
+		$('.game-main-window').fadeIn();
 		return;
 	}
 
