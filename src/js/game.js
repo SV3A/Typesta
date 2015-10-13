@@ -1,3 +1,5 @@
+/* jshint node: true */
+'use strict';
 var $ = require('jquery');
 var Chartist = require('./chartist/chartist.js');
 var LoadText = require('./loadtxt.js');
@@ -10,6 +12,7 @@ var TypingTutor = (function() {
 		tenth,
 		soundOn = false,
 		wpmTimer,
+		isStarted,
 		progressTimer,
 		elapsedSeconds,
 		timer,
@@ -22,8 +25,8 @@ var TypingTutor = (function() {
 		wpmCount = $('.hud .hud-item .wpm'),
 		accuCount = $('.hud .hud-item .accu'),
 		progressBar = $('.meter span'),
-		starsContainer = $(".results-window .stars p"),
-		clockElement = $('.typing-window .clock p');
+		starsContainer = $('.results-window .stars p'),
+		clockElement = $('.typing-window .clock p span');
 
 	function resetValues() {
 		typed = 0;
@@ -38,7 +41,7 @@ var TypingTutor = (function() {
 	function initialMarkup() {
 		lettersTotal = parseInt($('.text-to-be-typed span').length);
 		// Marks the text modified by loadText with nesecary CSS.
-		var mark = $('.typing-window p');
+		var mark = $('.typing-window .text-to-be-typed');
 		cur = mark.children(':first-child').addClass('first');
 		mark.children(':last-child').addClass('last');
 		charCodes = LoadText.getCharcodes();
@@ -55,7 +58,7 @@ var TypingTutor = (function() {
 		cur.addClass('current-letter');
 		keyBoardGuidance.resetGuide();
 		keyBoardGuidance.getNext();
-		$(document).one("keypress", function() {
+		$(document).one('keypress', function() {
 			startTimer();
 			setTimeout(updateWpm, 1005);
 			updateProgress();
@@ -69,9 +72,9 @@ var TypingTutor = (function() {
 		clearInterval(timer);
 		clearTimeout(wpmTimer);
 		starsContainer.empty();
-		clockElement.text("00:00");
-		accuCount.text("100.0");
-		wpmCount.text("0");
+		clockElement.text('00:00');
+		accuCount.text('100.0');
+		wpmCount.text('0');
 		$(document).off();
 		$('.results-window')
 			.removeClass('show-results');
@@ -103,57 +106,57 @@ var TypingTutor = (function() {
 			++sec;
 			++elapsedSeconds;
 			min = Math.floor(elapsedSeconds / (60));
-			min = min < 10 ? "0" + min : min;
+			min = min < 10 ? '0' + min : min;
 			sec = sec == 60 ? 0 : sec;
-			sec = sec < 10 ? "0" + sec : sec;
-			clockElement.text(min + ":" + sec);
+			sec = sec < 10 ? '0' + sec : sec;
+			clockElement.text(min + ':' + sec);
 		}, 1000);
 		return;
 	}
 	var
 		altKey,
 		leftShiftKey,
-		rightShifKey,
+		rightShiftKey,
 		fingerToUse;
 
 	var keyBoardGuidance = {
 		failAnimation: function(failSelector) {
-			failSelector.addClass("key-guide-fail")
+			failSelector.addClass('key-guide-fail')
 				.delay(700).queue(function() {
-					$(this).removeClass("key-guide-fail");
+					$(this).removeClass('key-guide-fail');
 					$(this).dequeue();
 				});
 		},
 		handAnimation: function(keyToFinger){
-			fingerToUse = keyToFinger.data("finger");
+			fingerToUse = keyToFinger.data('finger');
 			if (fingerToUse <= 5) {
-				$("#left-hand div").toggleClass("finger-" + fingerToUse);
+				$('#left-hand div').toggleClass('finger-' + fingerToUse);
 			} else {
-				$("#right-hand div").toggleClass("finger-" + fingerToUse);
+				$('#right-hand div').toggleClass('finger-' + fingerToUse);
 			}
 		},
 		resetGuide: function() {
-			$(".keyboard .top-row div").removeClass("key-guide-nxt");
-			$("#left-hand div").removeClass("finger-" + fingerToUse);
-			$("#right-hand div").removeClass("finger-" + fingerToUse);
-			$("#right-hand div").removeClass("finger-10");
-			$("#left-hand div").removeClass("finger-1");
-			altKey = $(".keyboard .top-row div[data-key='altgr']");
+			$('.keyboard .key-row div').removeClass('key-guide-nxt');
+			$('#left-hand div').removeClass('finger-' + fingerToUse);
+			$('#right-hand div').removeClass('finger-' + fingerToUse);
+			$('#right-hand div').removeClass('finger-10');
+			$('#left-hand div').removeClass('finger-1');
+			altKey = $(".keyboard .key-row div[data-key='altgr']");
 			leftShiftKey = $(".keyboard div[data-key='leftshiftkey']");
-			rightShiftKey = $(".keyboard .top-row div[data-key='rightshiftkey']");
+			rightShiftKey = $(".keyboard .key-row div[data-key='rightshiftkey']");
 		},
 		getNext: function() {
-			if ($(".keyboard .top-row div[data-key='" + charCodes[typed] + "']").length) {
-				$(".keyboard .top-row div[data-key='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
+			if ($(".keyboard .key-row div[data-key='" + charCodes[typed] + "']").length) {
+				$(".keyboard .key-row div[data-key='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
 
-				keyBoardGuidance.handAnimation($(".keyboard .top-row div[data-key='" + charCodes[typed] + "']"));
+				keyBoardGuidance.handAnimation($(".keyboard .key-row div[data-key='" + charCodes[typed] + "']"));
 
-			} else if ($(".keyboard .top-row div[data-shift='" + charCodes[typed] + "']").length) {
-				$(".keyboard .top-row div[data-shift='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
+			} else if ($(".keyboard .key-row div[data-shift='" + charCodes[typed] + "']").length) {
+				$(".keyboard .key-row div[data-shift='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
 
-				keyBoardGuidance.handAnimation($(".keyboard .top-row div[data-shift='" + charCodes[typed] + "']"));
+				keyBoardGuidance.handAnimation($(".keyboard .key-row div[data-shift='" + charCodes[typed] + "']"));
 
-				if ($(".keyboard .top-row div[data-shift='" + charCodes[typed] + "']").data("finger") > 5) {
+				if ($(".keyboard .key-row div[data-shift='" + charCodes[typed] + "']").data("finger") > 5) {
 					leftShiftKey.toggleClass("key-guide-nxt");
 					$("#left-hand div").toggleClass("finger-1");
 				} else {
@@ -162,8 +165,8 @@ var TypingTutor = (function() {
 				}
 			} else {
 				altKey.toggleClass("key-guide-nxt");
-				$(".keyboard .top-row div[data-alt='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
-				keyBoardGuidance.handAnimation($(".keyboard .top-row div[data-alt='" + charCodes[typed] + "']"));
+				$(".keyboard .key-row div[data-alt='" + charCodes[typed] + "']").toggleClass("key-guide-nxt");
+				keyBoardGuidance.handAnimation($(".keyboard .key-row div[data-alt='" + charCodes[typed] + "']"));
 			}
 		},
 		showFail: function(key) {
@@ -172,7 +175,7 @@ var TypingTutor = (function() {
 			} else if ($(".keyboard div[data-shift='" + key + "']").length) {
 				keyBoardGuidance.failAnimation($(".keyboard div[data-shift='" + key + "']"));
 
-				if ($(".keyboard .top-row div[data-shift='" + key + "']").data("finger") > 5) {
+				if ($(".keyboard .key-row div[data-shift='" + key + "']").data("finger") > 5) {
 					keyBoardGuidance.failAnimation(leftShiftKey);
 				} else {
 					keyBoardGuidance.failAnimation(rightShiftKey);
@@ -219,7 +222,7 @@ var TypingTutor = (function() {
 			if (goback.which == 8) {
 				goback.preventDefault();
 				// Has the game started or is it over?
-				if (!cur.hasClass('first') && !cur.hasClass('last')) {
+				if (typed !== 0) {
 					cur.removeClass('current-letter fail ok');
 					cur = cur.prev();
 					cur
@@ -269,7 +272,7 @@ var TypingTutor = (function() {
 			"q:",tenth
 			]); 
 		*/
-		progressTimer = setTimeout(updateProgress, 200);
+		progressTimer = setTimeout(updateProgress, 500);
 		return;
 	}
 
@@ -335,11 +338,13 @@ var TypingTutor = (function() {
 		$('.wpm-max p .result').text(maxWpm);
 		$('.accu-two p .result').text((100 - ((errors / lettersTotal) * 100)).toFixed(2));
 		starsScore(wpmAvg);
+		
+		/**
 		$('html, body').animate({
 			scrollTop: $('.results-window').offset().top
 		}, 500, function() {
-			$('.results-window').addClass('show-results');
-		});
+			$('.results-window').show();
+		});*/
 
 		var chart = Chartist.Line('#results-chart', {
 			labels: timePoints,
@@ -353,6 +358,7 @@ var TypingTutor = (function() {
 				right: 40
 			}
 		});
+		$('.results-window').fadeIn(600);
 		return;
 	}
 
@@ -363,8 +369,7 @@ var TypingTutor = (function() {
 			}
 			KeyboardSimulator.loadKeyboard("dk");
 			initialMarkup();
-			isStarted = false;
-			return isStarted;
+			return;
 		},
 
 		startGame: function() {
@@ -379,7 +384,7 @@ var TypingTutor = (function() {
 			$(".hands").slideDown( 200 );
 			startGame();
 			isStarted = true;
-			return isStarted;
+			return;
 		},
 
 		restartGame: function() {
@@ -387,12 +392,16 @@ var TypingTutor = (function() {
 			return;
 		},
 
+		gameState: function(){
+			return isStarted;
+		},
+
 		toggleSound: function() {
 			if (soundOn === false) {
-				$('.typing-window .volume-box i').removeClass('off');
+				$('.volume-box #sound-button i').addClass('vol-on');
 				soundOn = true;
 			} else {
-				$('.typing-window .volume-box i').addClass('off');
+				$('.volume-box #sound-button i').removeClass('vol-on');
 				soundOn = false;
 			}
 			return;

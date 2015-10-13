@@ -65,6 +65,7 @@ include 'header.php';
 		<p>
 			<a href="#">About</a>
 			<a href="#">Contact</a>
+			<a href="#">Report problem</a>
 			<a href="#">Privacy & Terms</a>
 		</p>
 	</div>

@@ -23,10 +23,6 @@ input, textarea {
     color: #222;
 }
 
-p {
-    font-size: 2.0rem;
-}
-
 h2 {
     font-size: 3.8rem;
 }
@@ -52,16 +48,10 @@ hr {
     margin-top: 2.5rem;
 }
 
-.heading {
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-    text-align: center;
-    padding-top: 25px;
-    letter-spacing: -2px;
-}
-
 
 /* UTILS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .text-center {
     text-align: center;
 }
@@ -79,9 +69,78 @@ hr {
 }
 
 
-/* FRONTPAGE
+/* TOPBAR
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+.top-bar{
+    height: 7%;
+    width: 100%;
+    background: #FFF;
+    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.49);
+}
+
+.ts-logo-top-bar{
+    padding-top:0.3rem;
+    text-align:center;
+}
+
+.top-bar img{
+    margin-left: 0.4rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.ts-logo-top-bar > .heading{
+    display: inline-block;
+    margin:0;
+    line-height: 1.3;
+    font-size: 2.8rem;
+    color:$minty-green;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: -2px;
+}
+
+.user{
+    height: 100%;
+}
+
+.user-buttons{
+    float: right;
+    height: 100%;
+    width: 7.0rem;
+    max-width: 7.0rem;
+    color: #B6B6B6;
+    text-align: center;
+    border-left:1px solid #F1F1F1;
+    transition: all .3s ease-in;
+    &:hover{
+        color: #757575;
+    }
+}
+
+.user-buttons p{
+    font-size: 1.3rem;
+    padding-top:1.3rem;
+}
+
+.log-in-button{
+    background-color:#D8F9FF;
+    &:hover{
+        background-color:#87EDFF;
+    }
+}
+
+.stats-button{
+    background-color:#FFE0D8;
+    &:hover{
+        background-color:#FF9478;
+    }
+}
+
+
+/* FRONTPAGE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 #welcome {
     color: #171717;
@@ -124,7 +183,6 @@ hr {
     letter-spacing: -2px;
     margin-bottom: 10px;
     display: inline;
-    text-shadow: none;
 }
 
 #hero-content .sub-heading {
@@ -192,14 +250,13 @@ hr {
 /* MENU
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-
 .ham, .close-menu {
     position: fixed;
     font-smoothing: antialiased;
     cursor: pointer;
     top: 0.2em;
     left: 0.5em;
-    font-size: 28px;
+    font-size: 22px;
     transform: translate3d(0, 0, 0);
     transition: transform .4s ease-in, color .1s;
     z-index: 35;
@@ -219,7 +276,8 @@ hr {
 }
 
 .ham:hover {
-    color: white;
+    color: #E9E9E9;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
 .close-menu:hover {
@@ -252,7 +310,7 @@ hr {
 }
 
 .menu a {
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #5F5F5F;
     text-decoration: none;
@@ -296,10 +354,17 @@ nav.active {
     left: 0;
 }
 
+@media (min-width: 1650px) {
+    .ham, .close-menu {
+        top: 0.2em;
+        left: 0.5em;
+        font-size: 28px;
+    }
+}
+
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 
 .footer-text {
     background: $minty-green;
@@ -352,15 +417,34 @@ footer p {
     margin: 4px 5px;
 }
 
-.more-footer-links {
+.more-footer-links, .problem-link {
     position: absolute;
-    left: 8px;
-    bottom: 8px;
+    bottom: 0.8rem;
 }
 
-.more-footer-links p {
+.problem-link {
+    z-index: 80;
+    right: 0.8rem;
+}
+
+.problem-link .fa-exclamation-triangle{
+    color:#CBC27A;
+}
+
+.problem-link a:hover .fa-exclamation-triangle{
+    color:#CB827A;
+    transform: scale(1.2);
+    margin-left: 0.4rem;
+}
+
+.more-footer-links p, .problem-link p {
     margin: 0;
-    font-size: 14px;
+    font-size: 1.3rem;
+}
+
+.problem-link a {
+    color: #8C8C8C;
+    margin: 0 0 0 8px;
 }
 
 .more-footer-links a {
@@ -368,14 +452,13 @@ footer p {
     margin: 0 0 0 8px;
 }
 
-.more-footer-links a:hover {
+.more-footer-links a:hover, .problem-link a:hover {
     color: white;
 }
 
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 
 .button,
 button,
@@ -406,8 +489,26 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
     color: #4C4C4C;
+    height: 75px;
+    width: 75px;
+    border-radius:50%;
+    text-align: center;
+    padding:18px 10px;
+    border:none;
     background-color: $minty-green;
-    border-color: $minty-green;
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.3), inset 13px 34px 44px -9px #00FFB9;
+    margin-left: 20px;
+}
+
+.button-reset{
+    float: left;
+    font-size:26px;
+    color: white;
+    margin-left:5%;
+}
+
+.button-reset:hover{
+    color: $minty-green;
 }
 
 .button.button-primary:hover,
@@ -421,7 +522,6 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
     background-color: #34D189;
-    border-color: #34D189;
 }
 
 @import "game";

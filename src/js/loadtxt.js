@@ -1,11 +1,13 @@
+/* jshint node: true */
+'use strict';
 var $ = require('jquery');
 
 var LoadText = (function() {
 	var charCodes = [];
 	function loadRegularTxt(txtSelector) {
 		// Adds a span around each character after removing multiple instances of spaces
-		$elem = $(txtSelector);
-		var chars = $.map($elem.text().replace(/\s\s+/g, ' ').split(''), function(c) {
+		var $elem = $(txtSelector);
+		var chars = $.map($elem.text().replace(/\s\s+/g, '').split(''), function(c) {
 			charCodes.push(c.charCodeAt(0));
 			return '<span class="">' + c + '</span>';
 		});
