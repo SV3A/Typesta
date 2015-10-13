@@ -73,8 +73,9 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .top-bar{
-    height: 7%;
+    height: 45px;
     width: 100%;
+    overflow: hidden;
     background: #FFF;
     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.49);
 }
@@ -106,8 +107,9 @@ hr {
 }
 
 .user-buttons{
+    display: none;
     float: right;
-    height: 100%;
+    height: 45px;
     width: 7.0rem;
     max-width: 7.0rem;
     color: #B6B6B6;
@@ -116,6 +118,12 @@ hr {
     transition: all .3s ease-in;
     &:hover{
         color: #757575;
+    }
+}
+
+@media (min-width: 550px) {
+    .user-buttons{
+        display: block;
     }
 }
 

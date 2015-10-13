@@ -10,23 +10,21 @@
 
 .game-main-window {
     user-select: none;
-    height: 93%;
 }
 
 .typing-window {
     position: relative;
     width: 100%;
-    height: 50%;
     cursor: default;
     background-color:#777777;
-    padding-bottom: 3.0rem;
+    padding-bottom: 3.8rem;
 }
 
 .typing-window h1 {
     text-align: center;
     text-transform: uppercase;
-    font-size:3.7rem;
-    margin-bottom: 0.4em;
+    font-size:3.6rem;
+    margin-bottom: 0.2em;
     font-weight: 300;
     letter-spacing: -2px;
     padding-bottom: 1.5rem;
@@ -40,6 +38,7 @@
 .text-container{
     width:60%;
     height: 108px;
+    margin-top: -0.8rem;
     overflow-y: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -76,11 +75,19 @@
 */
 
 .typing-window .text-to-be-typed {
-    font-size: 1.9rem;
-    line-height: 1.8;
+    font-size: 1.8rem;
+    line-height: 1.5;
     margin: 0;
     //font-family: "Roboto Mono", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     //font-weight: 300;
+}
+
+@media (min-width: 550px) {
+    .typing-window .text-to-be-typed {
+        font-size: 2.0rem;
+        line-height: 1.8;
+        margin: 0;
+    }
 }
 
 @media (min-width: 1650px) {
@@ -102,7 +109,7 @@
 
 .hud-item {
     display: inline-block;
-    padding: 0 20px 8px 20px;
+    padding: 0 1.0rem;
 }
 
 .progressbar {
@@ -195,7 +202,6 @@ $keyboard-size: 80px;
     padding-top:1.2rem;
     clear:both;
     width: 100%;
-    height: 50%;
 }
 
 #keyboard-wrapper{
@@ -390,7 +396,7 @@ $hand-base: 300px;
     height: $hand-base*(437/340);
     position: absolute;
     z-index: 3;
-    bottom: -($hand-base/3);
+    bottom: -($hand-base/1.8);
 }
 
 #left-hand{
@@ -528,7 +534,7 @@ $hand-base: 300px;
     height: 10px;
     position: relative;
     padding: 0px;
-    margin-bottom: 3.8rem;
+    margin-bottom: 3.2rem;
     //box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 }
 
