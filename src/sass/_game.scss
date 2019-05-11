@@ -2,193 +2,193 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .fullscreen-game{
-    position:relative;
-    height: 100%;
-    overflow-x:hidden;
-    overflow-y: hidden;
+  position:relative;
+  height: 100%;
+  overflow-x:hidden;
+  overflow-y: hidden;
 }
 
 .game-main-window {
-    user-select: none;
+  user-select: none;
 }
 
 .typing-window {
-    position: relative;
-    width: 100%;
-    cursor: default;
-    background-color:#777777;
-    padding-bottom: 3.8rem;
+  position: relative;
+  width: 100%;
+  cursor: default;
+  background-color:#777777;
+  padding-bottom: 3.8rem;
 }
 
 .typing-window h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size:3.6rem;
-    margin-bottom: 0.2em;
-    font-weight: 300;
-    letter-spacing: -2px;
-    padding-bottom: 1.5rem;
-    border-bottom:1px solid grey;
+  text-align: center;
+  text-transform: uppercase;
+  font-size:3.6rem;
+  margin-bottom: 0.2em;
+  font-weight: 300;
+  letter-spacing: -2px;
+  padding-bottom: 1.5rem;
+  border-bottom:1px solid grey;
 }
 
 .typing-window h1 .fa-bolt {
-    color: #F3FF89;
+  color: #F3FF89;
 }
 
 .text-container{
-    width:60%;
-    height: 108px;
-    margin-top: -0.8rem;
-    overflow-y: hidden;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: 1px solid #CBCBCB;
+  width:60%;
+  height: 108px;
+  margin-top: -0.8rem;
+  overflow-y: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #CBCBCB;
 }
 
 .text-to-be-typed span {
-    padding: 0 1px 0 0;
-    border-radius: 1px;
-    border-left: 1px solid transparent;
+  padding: 0 1px 0 0;
+  border-radius: 1px;
+  border-left: 1px solid transparent;
 }
 
 @media (min-width: 1200px) {
-    .typing-window {
-        overflow-y: inherit;
-    }
+  .typing-window {
+    overflow-y: inherit;
+  }
 }
 
 /*
 .typing-window::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-    background-color: #B4B4B4;
+box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+border-radius: 6px;
+background-color: #B4B4B4;
 }
 .typing-window::-webkit-scrollbar {
-    width: 8px;
-    background: rgba(255, 255, 255, 0.2);
+width: 8px;
+background: rgba(255, 255, 255, 0.2);
 }
 .typing-window::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #E4E4E4;
+border-radius: 6px;
+box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+background-color: #E4E4E4;
 }
-*/
+ */
 
 .typing-window .text-to-be-typed {
-    font-size: 1.8rem;
-    line-height: 1.5;
-    margin: 0;
-    //font-family: "Roboto Mono", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    //font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin: 0;
+  //font-family: "Roboto Mono", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  //font-weight: 300;
 }
 
 @media (min-width: 550px) {
-    .typing-window .text-to-be-typed {
-        font-size: 2.0rem;
-        line-height: 1.8;
-        margin: 0;
-    }
+  .typing-window .text-to-be-typed {
+    font-size: 2.0rem;
+    line-height: 1.8;
+    margin: 0;
+  }
 }
 
 @media (min-width: 1650px) {
-    .typing-window p {
-        font-size: 2.4rem;
-        line-height: 1.8;
-    }
+  .typing-window p {
+    font-size: 2.4rem;
+    line-height: 1.8;
+  }
 }
 
 .hud {
-    text-align: right;
+  text-align: right;
 }
 
 .hud p {
-    margin: 0;
-    font-size: 1.7rem;
-    color:#D8D8D8;
+  margin: 0;
+  font-size: 1.7rem;
+  color:#D8D8D8;
 }
 
 .hud-item {
-    display: inline-block;
-    padding: 0 1.0rem;
+  display: inline-block;
+  padding: 0 1.0rem;
 }
 
 .progressbar {
-    width: 0%;
-    transition: width .3s ease-out;
+  width: 0%;
+  transition: width .3s ease-out;
 }
 
 .wpm, .accu {
-    color: #3EFFCB;
-    font-weight: 600;
+  color: #3EFFCB;
+  font-weight: 600;
 }
 
 .current-letter {
-    animation: 1s cursor-blink step-end infinite;
+  animation: 1s cursor-blink step-end infinite;
 }
 
 @keyframes cursor-blink {
-    from, to {
-        border-color: #C3F0F2;
-    }
-    50% {
-        border-color: transparent;
-    }
+  from, to {
+    border-color: #C3F0F2;
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .fail {
-    color: #FF542C;
+  color: #FF542C;
 }
 
 .ok {
-    color: #ABABAB;
+  color: #ABABAB;
 }
 
 .clock {
-    display: inline-block;
-    float:right;
-    margin-right: 17%;
+  display: inline-block;
+  float:right;
+  margin-right: 17%;
 }
 
 .clock p {
-    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.6rem;
-    color: #C3F0F2;
-    margin:0;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  color: #C3F0F2;
+  margin:0;
 }
 
 .controls {
-    margin-left: 10%;
+  margin-left: 10%;
 }
 
 .volume-box {
-    position: absolute;
-    top: 1.6rem;
-    right: 2.8rem;
-    color: white;
+  position: absolute;
+  top: 1.6rem;
+  right: 2.8rem;
+  color: white;
 }
 
 .volume-box a {
-    color: #424242;
-    font-size: 18px;
-    margin-left: 1.0rem;
+  color: #424242;
+  font-size: 18px;
+  margin-left: 1.0rem;
 }
 
 .volume-box a:hover, .vol-on {
-    color: #FFF;
+  color: #FFF;
 }
 
 .hidden-reset {
-    opacity: 0;
-    transform: translateX(600px);
+  opacity: 0;
+  transform: translateX(600px);
 }
 
 .show-reset {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .tip{
-	display: inline;
+  display: inline;
 }
 
 
@@ -198,104 +198,104 @@
 $keyboard-size: 80px;
 
 .keyboard-area{
-    position:relative;
-    padding-top:1.2rem;
-    clear:both;
-    width: 100%;
+  position:relative;
+  padding-top:1.2rem;
+  clear:both;
+  width: 100%;
 }
 
 #keyboard-wrapper{
-	text-align: center;
-    width: 100%;
-    font-size: $keyboard-size / 16.1;
+  text-align: center;
+  width: 100%;
+  font-size: $keyboard-size / 16.1;
 }
 
 .keyboard{
-    background-color: #D5D5D5;
-    display: inline-block;
-    border-radius: 10px;
-    margin-left:auto;
-    margin-right: auto;
-    padding:1.6em;
-    border: 1px solid #B3B3B3;
-    box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.49);
+  background-color: #D5D5D5;
+  display: inline-block;
+  border-radius: 10px;
+  margin-left:auto;
+  margin-right: auto;
+  padding:1.6em;
+  border: 1px solid #B3B3B3;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.49);
 }
 
 .keys-wrapper{
-    position: relative;
-    display: inline-block;
-    width: $keyboard-size * 3;
-    height: $keyboard-size * 1;
-	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  width: $keyboard-size * 3;
+  height: $keyboard-size * 1;
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.2;
 }
 
 @media (min-width: 400px) {
-    .keys-wrapper{
-        width: ($keyboard-size+20) * 3;
-        height: ($keyboard-size+20) * 1;
-        font-size: ($keyboard-size+20) / 16.1;
-    }
+  .keys-wrapper{
+    width: ($keyboard-size+20) * 3;
+    height: ($keyboard-size+20) * 1;
+    font-size: ($keyboard-size+20) / 16.1;
+  }
 }
 
 @media (min-width: 550px) {
-    .keys-wrapper{
-        width: ($keyboard-size+60) * 3;
-        height: ($keyboard-size+60) * 1;
-        font-size: ($keyboard-size+60) / 16.1;
-    }
+  .keys-wrapper{
+    width: ($keyboard-size+60) * 3;
+    height: ($keyboard-size+60) * 1;
+    font-size: ($keyboard-size+60) / 16.1;
+  }
 }
 
 @media (min-width: 750px) {
-    .keys-wrapper{
-        width: ($keyboard-size+100) * 3;
-        height: ($keyboard-size+100) * 1;
-        font-size: ($keyboard-size+100) / 16.1;
-    }
+  .keys-wrapper{
+    width: ($keyboard-size+100) * 3;
+    height: ($keyboard-size+100) * 1;
+    font-size: ($keyboard-size+100) / 16.1;
+  }
 }
 
 @media (min-width: 1200px) {
-    .keys-wrapper{
-        width: ($keyboard-size+125) * 3;
-        height: ($keyboard-size+125) * 1;
-        font-size: ($keyboard-size+125) / 16.1;
-    }
+  .keys-wrapper{
+    width: ($keyboard-size+125) * 3;
+    height: ($keyboard-size+125) * 1;
+    font-size: ($keyboard-size+125) / 16.1;
+  }
 
 }
 
 @media (min-width: 1500px) {
-    .keys-wrapper{
-        width: ($keyboard-size+150) * 3;
-        height: ($keyboard-size+150) * 1;
-        font-size: ($keyboard-size+150) / 16.1;
-    }
+  .keys-wrapper{
+    width: ($keyboard-size+150) * 3;
+    height: ($keyboard-size+150) * 1;
+    font-size: ($keyboard-size+150) / 16.1;
+  }
 }
 
 .key-row{
-	height: 20%;
+  height: 20%;
 }
 
 .keyboard-key{
-	height: 100%;
-	float: left;
-	border-radius: 0.4em;
-    color:#919191;
-    background-color: #FDFDFD;
-	border: 0.15em solid #D5D5D5;
+  height: 100%;
+  float: left;
+  border-radius: 0.4em;
+  color:#919191;
+  background-color: #FDFDFD;
+  border: 0.15em solid #D5D5D5;
 }
 
 .keyboard-key span{
-	display:block;
-	margin-top: 0.2em;
-    font-size: 0.9em;
+  display:block;
+  margin-top: 0.2em;
+  font-size: 0.9em;
 }
 
 span.letter{
-    margin-top: 0.7em; 
+  margin-top: 0.7em;
 }
 
 .muted-key{
-	background-color: #E6E6E6 !important;
+  background-color: #E6E6E6 !important;
 }
 
 .small-key{
@@ -315,7 +315,7 @@ span.letter{
 }
 
 .shift-key-right{
-    width: 16.667%;
+  width: 16.667%;
 }
 
 .space-key{
@@ -357,32 +357,32 @@ span.letter{
 }
 
 .enter-key-iso span{
-    margin:0;
+  margin:0;
 }
 
 .key-guide-nxt{
-    background-color: $minty-green !important;
+  background-color: $minty-green !important;
 }
 
 .key-guide-fail{
-    background-color: #FF2154 !important;
-    color: white !important;
-    animation-name: fail-blick;
-    animation-duration: .2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  background-color: #FF2154 !important;
+  color: white !important;
+  animation-name: fail-blick;
+  animation-duration: .2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 @keyframes fail-blick {
-    0% {
-        background-color: #FF2154;
-    }
-    50% {
-        background-color: #FDFDFD;
-    }
-    100% {
-        background-color: #FF2154;
-    }
+  0% {
+    background-color: #FF2154;
+  }
+  50% {
+    background-color: #FDFDFD;
+  }
+  100% {
+    background-color: #FF2154;
+  }
 }
 
 
@@ -392,38 +392,38 @@ span.letter{
 $hand-base: 300px;
 
 .hands{
-    width: $hand-base;
-    height: $hand-base*(437/340);
-    position: absolute;
-    z-index: 3;
-    bottom: -($hand-base/1.8);
+  width: $hand-base;
+  height: $hand-base*(437/340);
+  position: absolute;
+  z-index: 3;
+  bottom: -($hand-base/1.8);
 }
 
 #left-hand{
-    background: url("../img/hands/lefthand.png");
-    background-size:100%;
-    left:10%;
+  background: url("../img/hands/lefthand.png");
+  background-size:100%;
+  left:10%;
 }
 
 #right-hand{
-    background: url("../img/hands/righthand.png");
-    background-size:100%;
-    right:10%;
+  background: url("../img/hands/righthand.png");
+  background-size:100%;
+  right:10%;
 }
 
 .finger-heighlight{
-    position: absolute;
-    visibility: hidden;
-    width: 17%;
-    height: 14%;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.20);
-    box-shadow: 0 0 5px #fff, 0 0 15px #fff;
+  position: absolute;
+  visibility: hidden;
+  width: 17%;
+  height: 14%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.20);
+  box-shadow: 0 0 5px #fff, 0 0 15px #fff;
 }
 
-.finger-1, .finger-2, .finger-3, .finger-4, .finger-5, 
+.finger-1, .finger-2, .finger-3, .finger-4, .finger-5,
 .finger-6, .finger-7, .finger-8, .finger-9, .finger-10{
-    visibility: visible;  
+  visibility: visible;
 }
 
 .finger-1, .finger-10{top: 14%;}
@@ -448,100 +448,100 @@ $hand-base: 300px;
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .results-window {
-    position:absolute;
-    background-color: #4C4C4C;
-    top:0;
-    width: 100%;
-    height: 100%;
-    z-index: 8;
-    overflow-y: hidden;
+  position:absolute;
+  background-color: #4C4C4C;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: 8;
+  overflow-y: hidden;
 }
 
 #close-result-window{
-    position:absolute;
-    top: 0.6em;
-    right: 0.8em;
-    width: 5rem;
-    height: 5rem;
-    border-radius:50%;
-    text-align: center;
-    background-color: #E3E3E3;
-    color:darkgrey;
-    line-height: 4.5rem;
-    font-size: 3.0rem;
-    cursor: pointer;
-    transition: all .2s;
-    &:hover{
-        background-color:grey;
-        color:white;
-        transform: scale(1.2) rotate(180deg);
-    }
+  position:absolute;
+  top: 0.6em;
+  right: 0.8em;
+  width: 5rem;
+  height: 5rem;
+  border-radius:50%;
+  text-align: center;
+  background-color: #E3E3E3;
+  color:darkgrey;
+  line-height: 4.5rem;
+  font-size: 3.0rem;
+  cursor: pointer;
+  transition: all .2s;
+  &:hover{
+    background-color:grey;
+    color:white;
+    transform: scale(1.2) rotate(180deg);
+  }
 }
 
 #close-result-window span{
-    margin:0;
+  margin:0;
 }
 
 .ct-series-a .ct-line {
-    stroke: $minty-green;
+  stroke: $minty-green;
 }
 
 .ct-series-a .ct-point {
-    stroke: #2CC07C;
-    stroke-width: 10px;
+  stroke: #2CC07C;
+  stroke-width: 10px;
 }
 
 .ct-grid {
-    stroke: #CFCFCF;
+  stroke: #CFCFCF;
 }
 
 .ct-label {
-    fill: #CFCFCF;
-    color: #CFCFCF;
-    font-size: 14px;
+  fill: #CFCFCF;
+  color: #CFCFCF;
+  font-size: 14px;
 }
 
 .show-results {
-    opacity: 1;
-    transition: 1s ease-in;
+  opacity: 1;
+  transition: 1s ease-in;
 }
 
 .wpm-max, .wpm-avg, .accu-two, .title-wpm, .title-accu {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .result {
-    color: $minty-green;
+  color: $minty-green;
 }
 
 .accuracy p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .stars i {
-    color: #E2FF6F;
-    margin: 0 2px;
-    font-size: 30px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  color: #E2FF6F;
+  margin: 0 2px;
+  font-size: 30px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .motivation-message p {
-    font-size: 16px;
-    font-style: italic;
-    margin: 0 0 30px 0;
+  font-size: 16px;
+  font-style: italic;
+  margin: 0 0 30px 0;
 }
 
 .stars p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .y-axis {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .x-axis {
-    margin-top: -15px;
+  margin-top: -15px;
 }
 
 
@@ -549,23 +549,23 @@ $hand-base: 300px;
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .meter {
-    height: 10px;
-    position: relative;
-    padding: 0px;
-    margin-bottom: 3.2rem;
-    //box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+  height: 10px;
+  position: relative;
+  padding: 0px;
+  margin-bottom: 3.2rem;
+  //box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .meter > span {
-    display: block;
-	height: 100%;
-    //border-top-right-radius: 8px;
-    //border-bottom-right-radius: 8px;
-    //border-top-left-radius: 20px;
-    //border-bottom-left-radius: 20px;
-    background-color: $minty-green;
-    //background-image: linear-gradient(center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
-    box-shadow:  inset 0 -2px 6px rgba(0, 0, 0, 0.4);
-    position: relative;
-    overflow: hidden;
+  display: block;
+  height: 100%;
+  //border-top-right-radius: 8px;
+  //border-bottom-right-radius: 8px;
+  //border-top-left-radius: 20px;
+  //border-bottom-left-radius: 20px;
+  background-color: $minty-green;
+  //background-image: linear-gradient(center bottom, rgb(43, 194, 83) 37%, rgb(84, 240, 84) 69%);
+  box-shadow:  inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
 }

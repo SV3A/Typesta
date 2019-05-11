@@ -1,3 +1,3 @@
-		<script src="js/typesta.js"></script>
-	</body>
+    <script src="js/typesta.js"></script>
+  </body>
 </html>
