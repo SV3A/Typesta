@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://Rokid@bitbucket.org/Rokid/typing-project.git"
+    "url": "gitlab.com/sv3a/typesta"
   },
   "keywords": [
     "touch typing"
@@ -18,25 +18,25 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/Rokid/typing-project#readme",
   "devDependencies": {
-    "autoprefixer": "^6.0.3",
-    "browser-sync": "^2.9.3",
-    "browserify": "^11.1.0",
-    "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-csso": "^1.0.0",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-postcss": "^6.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.3",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.2.0",
-    "gulp-uncss": "^1.0.3",
-    "jquery": "^2.1.4",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.4.0"
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.5",
+    "browserify": "^16.2.3",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uncss": "^1.0.6",
+    "jquery": "^3.4.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.11.1"
   }
 }
