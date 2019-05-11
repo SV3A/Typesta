@@ -299,19 +299,19 @@ span.letter{
 }
 
 .small-key{
-	width: (100/15)+%;
+  width: (100/15)*1%;
 }
 
 .backspace-key{
-	width:((100/15)*2)+%;
+  width:((100/15)*2)*1%;
 }
 
 .tab-key, .shift-key, .ctrl-key, .win-key, .alt-key{
-	width:(((100/15)*3)/2)+%;
+  width:(((100/15)*3)/2)*1%;
 }
 
 .capslock-key, .right-shift-key{
-    width:((((100/15)*3)/3)*2)+%;
+  width:((((100/15)*3)/3)*2)*1%;
 }
 
 .shift-key-right{
@@ -319,41 +319,41 @@ span.letter{
 }
 
 .space-key{
-    width: 100-((((100/15)*3)/2)*6+((((100/15)*3)/3)*2))+%;
+  width: 100-((((100/15)*3)/2)*6+((((100/15)*3)/3)*2))*1%;
 }
 
 .enter-key-iso{
-	position:absolute;
-	right:0;
-    float:right;
-    height:40%;
-	width:(((100/15)*3)/2)+%;
-	border: none;
-	background-color: transparent;
+  position:absolute;
+  right:0;
+  float:right;
+  height:40%;
+  width:(((100/15)*3)/2)*1%;
+  border: none;
+  background-color: transparent;
 }
 
 .enter-key-upper-shape{
-	width:100%;
-	height:50%;
-    padding-top: 0.5em;
-	background-color:#FDFDFD;
-	border-radius:0.4em;
-	border-bottom-right-radius:0;
-	border: 0.15em solid #D5D5D5;
+  width:100%;
+  height:50%;
+  padding-top: 0.5em;
+  background-color:#FDFDFD;
+  border-radius:0.4em;
+  border-bottom-right-radius:0;
+  border: 0.15em solid #D5D5D5;
 }
 
 .enter-key-low-shape{
-	position: absolute;
-	bottom: 0;
-	right: 0px;
-    width:66%;
-	height: 52%;
-	background-color: #FDFDFD;
-	border-bottom-right-radius: 0.4em;
-	border-bottom-left-radius: 0.4em;
-	border: 0.15em solid #D5D5D5;
-	border-top: none;
-	z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  width:66%;
+  height: 52%;
+  background-color: #FDFDFD;
+  border-bottom-right-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
+  border: 0.15em solid #D5D5D5;
+  border-top: none;
+  z-index: 2;
 }
 
 .enter-key-iso span{
